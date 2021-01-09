@@ -7,6 +7,7 @@
 BUILD = build
 MAKEFILE = Makefile
 OUTPUT_FILENAME = book
+OUTPUT_HTML_FILENAME = index
 METADATA = metadata.yml
 CHAPTERS = chapters/*.md
 TOC = --toc --toc-depth 2
@@ -67,29 +68,29 @@ clean:
 
 epub:	$(BUILD)/epub/$(OUTPUT_FILENAME).epub
 
-html:	$(BUILD)/html/$(OUTPUT_FILENAME).html
+html:	$(BUILD)/html/$(OUTPUT_HTML_FILENAME).html
 
 pdf:	$(BUILD)/pdf/$(OUTPUT_FILENAME).pdf
 
 docx:	$(BUILD)/docx/$(OUTPUT_FILENAME).docx
 
-$(BUILD)/epub/$(OUTPUT_FILENAME).epub:	$(EPUB_DEPENDENCIES)
+$(BUILD)/epub/$(OUTPUT_FILENAME).epub: $(EPUB_DEPENDENCIES)
 	mkdir -p $(BUILD)/epub
 	$(CONTENT) | $(CONTENT_FILTERS) | $(PANDOC_COMMAND) $(ARGS) $(EPUB_ARGS) -o $@
 	@echo "$@ was built"
 
-$(BUILD)/html/$(OUTPUT_FILENAME).html:	$(HTML_DEPENDENCIES)
+$(BUILD)/html/$(OUTPUT_HTML_FILENAME).html:	$(HTML_DEPENDENCIES)
 	mkdir -p $(BUILD)/html
 	$(CONTENT) | $(CONTENT_FILTERS) | $(PANDOC_COMMAND) $(ARGS) $(HTML_ARGS) -o $@
 	cp --parent $(IMAGES) $(BUILD)/html/
 	@echo "$@ was built"
 
-$(BUILD)/pdf/$(OUTPUT_FILENAME).pdf:	$(PDF_DEPENDENCIES)
+$(BUILD)/pdf/$(OUTPUT_FILENAME).pdf: $(PDF_DEPENDENCIES)
 	mkdir -p $(BUILD)/pdf
 	$(CONTENT) | $(CONTENT_FILTERS) | $(PANDOC_COMMAND) $(ARGS) $(PDF_ARGS) -o $@
 	@echo "$@ was built"
 
-$(BUILD)/docx/$(OUTPUT_FILENAME).docx:	$(DOCX_DEPENDENCIES)
+$(BUILD)/docx/$(OUTPUT_FILENAME).docx: $(DOCX_DEPENDENCIES)
 	mkdir -p $(BUILD)/docx
 	$(CONTENT) | $(CONTENT_FILTERS) | $(PANDOC_COMMAND) $(ARGS) $(DOCX_ARGS) -o $@
 	@echo "$@ was built"
