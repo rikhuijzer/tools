@@ -19,7 +19,7 @@ jobs:
           wget https://github.com/jgm/pandoc/releases/download/$PANDOC_VERSION/pandoc-$PANDOC_VERSION-1-amd64.deb
           sudo dpkg -i pandoc-$PANDOC_VERSION-1-amd64.deb
 
-          wget https://github.com/lierdakil/pandoc-crossref/releases/download/$CROSSREF_VERSION/pandoc-crossref-Linux.tar.xz
+          wget https://github.com/lierdakil/pandoc-crossref/releases/download/v$CROSSREF_VERSION/pandoc-crossref-Linux.tar.xz
           tar -xf pandoc-crossref-Linux.tar.xz
         env:
           PANDOC_VERSION: 2.10.1
