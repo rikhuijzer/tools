@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies via tar
         run: |
           wget https://github.com/jgm/pandoc/releases/download/$PANDOC_VERSION/pandoc-$PANDOC_VERSION-1-amd64.deb
-          sudo dpkg -i pandoc-${{ matrix.pandoc-version }}-1-amd64.deb
+          sudo dpkg -i pandoc-$PANDOC_VERSION-1-amd64.deb
 
           wget https://github.com/lierdakil/pandoc-crossref/releases/download/$CROSSREF_VERSION/pandoc-crossref-Linux.tar.xz
           tar -xf pandoc-crossref-Linux.tar.xz
