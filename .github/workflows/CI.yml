@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies via Ubuntu package manager
+        run: |
+          sudo apt-get -qq update
+          # Don't make this a fancy multiline thing which is hard to debug on the runner.
+          sudo apt-get install -y make
+          sudo apt-get install -y pandoc
+          sudo apt-get install -y pdf2svg
+          sudo apt-get install -y texlive-fonts-recommended
+          sudo apt-get install -y texlive-latex-base
+          sudo apt-get install -y texlive-binaries
+          # Includes Tikz.
+          sudo apt-get install -y texlive-pictures
+          sudo apt-get install -y texlive-latex-extra
+          # In response to error luatex85.sty not found.
+          sudo apt-get install -y texlive-luatex
+
+      - name: Build
+        run: make html
+
+      - name: Deploy to secondary branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/html
+
