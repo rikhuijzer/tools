@@ -41,9 +41,6 @@ $if(title)$
 $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
 $endif$
-$for(author)$
-<p class="author">$author$</p>
-$endfor$
 $if(date)$
 <p class="date">$date$</p>
 $endif$
@@ -57,9 +54,15 @@ $endif$
 $table-of-contents$
 </nav>
 $endif$
+This site is also available as 
+<a href="/book.pdf" target="_blank">PDF</a>.
 $body$
 $for(include-after)$
 $include-after$
 $endfor$
+<div class="license">
+  <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  Rik Huijzer.
+</div>
 </body>
 </html>

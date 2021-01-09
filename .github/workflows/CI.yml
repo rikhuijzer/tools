@@ -29,8 +29,13 @@ jobs:
           # In response to error luatex85.sty not found.
           sudo apt-get install -y texlive-luatex
 
-      - name: Build
+      - name: Build html
         run: make html
+
+      - name: Build pdf
+        run: |
+          make pdf
+          mv build/pdf/book.pdf build/html/book.pdf
 
       - name: Deploy to secondary branch
         uses: peaceiris/actions-gh-pages@v3
