@@ -5,6 +5,8 @@ Science is a complex endeavour.
 This was confirmed for psychology [@open2015estimating] and other fields.
 Since then, much advises have been given on improving statistical techniques.
 However, following all these advises is difficult and often increases the complexity of the analysis even further since we need to do more analyses, some of which are also computationally intensive, and need to do them better.
+The more complex an analysis is, the easier it is to make an error.
+Things like this actually happen, see for example, the retraction by @aboumatar2019notice.
 
 For most scientists, the biggest part of the work isn't in the lab or in the field.
 It is, basically, moving text and data around.
