@@ -24,11 +24,13 @@ There are a plethora of benefits for using open source software, such as
 The chapters will build on top of each other in the sense that later chapters are easier when the tools of easier chapters are used.
 For example, later chapters include more code which is managed best via version control.
 
-Tools:
+Chapters:
 
-- Text editors
-- Git
-- Linux
-- CI (the abstraction)
-- Julia
+- Where it all starts (terminal and OS)
+- Quick text editing (text editors)
+- Not losing your files (version control)
+- Avoiding manual calculations (Julia)
 - Bayesian statistics
+- Frequentists statistics
+- Linking your calculations to your files (CI; the abstraction)
+- Not losing your data (dvc, pachyderm)
