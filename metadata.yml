@@ -11,4 +11,6 @@ title-prefix: Tools
 titlepage: true
 linkReferences: true
 bibliography: references.bib
+csl: templates/ieee.csl
+link-citations: true
 ---
