@@ -3,7 +3,18 @@ MAKEFILE = Makefile
 OUTPUT_FILENAME = book
 OUTPUT_HTML_FILENAME = index
 METADATA = metadata.yml
-CHAPTERS = chapters/*.md
+CHAPTERS += $(addprefix ./chapters/,\
+ introduction.md\
+ start.md\
+ editing.md\
+ git.md\
+ pandoc.md\
+ julia.md\
+ data.md\
+ statistics.md\
+ ci.md\
+ references.md\
+)
 TOC = --toc --toc-depth 2
 METADATA_ARGS = --metadata-file $(METADATA)
 IMAGES = $(shell find images -type f)
