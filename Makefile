@@ -26,7 +26,7 @@ FILTER_ARGS = --filter pandoc-crossref --filter pandoc-citeproc
 
 ARGS = $(TOC) $(MATH_FORMULAS) $(METADATA_ARGS) $(FILTER_ARGS) $(DEBUG_ARGS)
 	
-PANDOC_COMMAND = pandoc
+PANDOC_COMMAND = pandoc --number-sections --top-level-division=chapter 
 
 EPUB_ARGS = --template templates/epub.html --epub-cover-image $(COVER_IMAGE)
 HTML_ARGS = --template templates/html.html --standalone --css style.css --to html5

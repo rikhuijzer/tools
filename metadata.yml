@@ -1,6 +1,6 @@
 ---
 title: Tools for Science
-subtitle: Managing Complexity like a Software Engineer
+subtitle: Making robots do the work and managing complexity
 book: true
 author: Rik Huijzer
 lang: en-US
@@ -11,6 +11,6 @@ title-prefix: Tools
 titlepage: true
 linkReferences: true
 bibliography: references.bib
-csl: templates/ieee.csl
+csl: templates/apa.csl
 link-citations: true
 ---
