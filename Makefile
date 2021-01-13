@@ -13,10 +13,12 @@ CHAPTERS += $(addprefix ./chapters/,\
  data.md\
  statistics.md\
  ci.md\
+ appendix.md\
  references.md\
 )
 TOC = --toc --toc-depth 2
 METADATA_ARGS = --metadata-file $(METADATA)
+INCLUDE_FILES_ARG = --lua-filter pandoc/include-files.lua
 IMAGES = $(shell find images -type f)
 TEMPLATES = $(shell find templates/ -type f)
 COVER_IMAGE = images/cover.png
@@ -35,7 +37,7 @@ FILTER_ARGS = --filter pandoc-crossref --filter pandoc-citeproc
 
 # Combined arguments
 
-ARGS = $(TOC) $(MATH_FORMULAS) $(METADATA_ARGS) $(FILTER_ARGS) $(DEBUG_ARGS)
+ARGS = $(TOC) $(MATH_FORMULAS) $(METADATA_ARGS) $(INCLUDE_FILES_ARG) $(FILTER_ARGS) $(DEBUG_ARGS)
 	
 PANDOC_COMMAND = pandoc --number-sections --top-level-division=chapter 
 
@@ -56,11 +58,11 @@ book:	epub html pdf
 clean: 
 	rm -r $(BUILD)
 
-epub:	$(BUILD)/epub/$(OUTPUT_FILENAME).epub
+epub: $(BUILD)/epub/$(OUTPUT_FILENAME).epub
 
-html:	$(BUILD)/html/$(OUTPUT_HTML_FILENAME).html
+html: $(BUILD)/html/$(OUTPUT_HTML_FILENAME).html
 
-pdf:	$(BUILD)/pdf/$(OUTPUT_FILENAME).pdf
+pdf: $(BUILD)/pdf/$(OUTPUT_FILENAME).pdf
 
 $(BUILD)/epub/$(OUTPUT_FILENAME).epub: $(EPUB_DEPENDENCIES)
 	mkdir -p $(BUILD)/epub

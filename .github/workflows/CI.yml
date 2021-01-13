@@ -41,13 +41,17 @@ jobs:
           # In response to error luatex85.sty not found.
           sudo apt-get install -y texlive-luatex
 
-      - name: Build html
-        run: make html
+      - uses: julia-actions/setup-julia@v1
+      - uses: julia-actions/julia-buildpkg@master
+      - run: julia --project -e 'using Tools; build()'
 
       - name: Build pdf
         run: |
           make pdf
           mv build/pdf/book.pdf build/html/book.pdf
+
+      - name: Build html
+        run: make html
 
       - name: Deploy to secondary branch
         if: ${{ github.event_name == 'push' }}
