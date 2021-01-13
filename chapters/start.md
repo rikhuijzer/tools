@@ -9,5 +9,5 @@ All the operating sytems have one thing in common: the _terminal_[^terminal].
 
 Subsections:
 
-- Set up terminal with memory; fuzzy search
+- Set up terminal with memory; fuzzy search (nope, this is advanced an should be appendix)
 - Window management and shortcuts.

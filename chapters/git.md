@@ -30,9 +30,26 @@ These problems are solved by a tool created by Linus Torvalds.
 Linus is the maintainer of the Linux kernel which, in summary, is the manual for all the Linux computers and servers in the world.
 Around 2005, Linus had thousands of people working on the manual [@loeliger2012version].
 He was then reviewing the changes and merged them in the main manual version if it all looked good.
-On a typical merge, this could take 2 hours [@torvalds2005], which Linus wasn't willing to accept.
-He wanted 3 seconds [@torvalds2005] which he managed to get by creating _Git_.
+A typical merge would take the computer 2 hours [@torvalds2005], which Linus wasn't willing to accept.
+He wanted 3 seconds [@torvalds2005] which he managed to obtain by creating _Git_.
 
-## Managing your project
+Nowadays, Git is the tool that all software engineers agree upon and where countless other tools are build upon.
+This is an impressive feat because there is a joke that says: "arguing with engineers is like rolling in the mud with pigs; after a while you realise that they like it."
+If you talk to software engineers about Git, they will agree that it is **the best tool** for the job.
+Even if you are no software engineer, this is the tool that has been missing from your life.
+It will ensure that you never lose a file and that you don't have to struggle with files named `1`, `1b`, `1b-final` and `1b-final-final` again.
 
-## Collaborating
+## All your history {#sec:git-history}
+
+The Git robot can be talked to via the terminal, as described in [Chapter @sec:start].
+For , we need to learn only a few words.
+
+Lets create a ridiciously important file called `ridiciously-important-file.txt` and place some text in it
+
+`ridiciously-important-file.txt`:
+```
+The solution to my research can be found in Devlin & John (2020).
+```
+(And, no, that is not a typo. John can, in fact, be a surname like in the name Elton John, see @atkinson1991.)
+
+## Collaborating {#sec:git-collaborating}
