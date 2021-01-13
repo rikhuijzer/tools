@@ -6,8 +6,8 @@ METADATA = metadata.yml
 CHAPTERS += $(addprefix ./chapters/,\
  introduction.md\
  start.md\
- editing.md\
  git.md\
+ editing.md\
  pandoc.md\
  julia.md\
  data.md\

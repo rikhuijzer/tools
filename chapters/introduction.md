@@ -77,11 +77,10 @@ However, on their way home, they would realise that the tool doesn't work in the
 For example, learning how to use a fast text editor is a worthy investment for any office worker were it not for the fact that tools like Word and Gmail don't support it.
 That's why I've writting this book: to show the whole picture instead of just one tool.
 
-The rest of this book will start by some required preliminaries in [Chapter @sec:start] and -@sec:editing.
-These chapters lay the foundation for interacting with the robots in the subsequent chapters.
+The rest of this book will start by explaining how to interact with robots in [Chapter @sec:start].
 [Chapter @sec:git] will introduce the Git-robot.
 This robot keeps track of files and with it you will never lose a file again.
-After this chapter, our files are safe so we can start to automatically create all kinds of files, such as PDFs, Word documents and even websites.
+After this chapter, our files are safe so we can start edit files quickly in [Chapter @sec:editing] and to automatically create all kinds of files, such as PDFs, Word documents and even websites.
 This is done via the Pandoc-robot of [Chapter @sec:pandoc].
 When that is done, it is time to step into the Julia programming language in [Chapter @sec:julia].
 Learning a *language* might sound daunting, but I've chosen Julia precisely because it is an easy language to learn.
