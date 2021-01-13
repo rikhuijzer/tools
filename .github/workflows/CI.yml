@@ -48,6 +48,7 @@ jobs:
       - name: Build pdf
         run: |
           make pdf
+          mkdir --parents build/html
           mv build/pdf/book.pdf build/html/book.pdf
 
       - name: Build html
