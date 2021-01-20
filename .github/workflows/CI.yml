@@ -32,14 +32,10 @@ jobs:
           sudo apt-get install -y make
           sudo apt-get install -y pdf2svg
           sudo apt-get install -y texlive-fonts-recommended
+          sudo apt-get install -y texlive-fonts-extra
           sudo apt-get install -y texlive-latex-base
           sudo apt-get install -y texlive-binaries
           sudo apt-get install -y texlive-xetex
-          # Includes Tikz.
-          sudo apt-get install -y texlive-pictures
-          sudo apt-get install -y texlive-latex-extra
-          # In response to error luatex85.sty not found.
-          sudo apt-get install -y texlive-luatex
 
       - uses: julia-actions/setup-julia@v1
       - name: Install Books.jl
