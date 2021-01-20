@@ -1,0 +1,13 @@
+chapters = [
+  "introduction",
+  "start",
+  "git",
+  "editing",
+  "pandoc",
+  "julia",
+  "data",
+  "statistics",
+  "ci",
+  "appendix",
+  "references"
+]

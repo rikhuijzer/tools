@@ -3,5 +3,5 @@
 ## Versions
 
 ```{.include}
-build/files/git-commit.md
+build/git-commit.md
 ```

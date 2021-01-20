@@ -2,3 +2,6 @@ name = "Tools"
 uuid = "33d3a340-ce3d-4fca-b494-2dd1a33f3cc6"
 authors = ["Rik Huijzer <rikhuijzer@pm.me>"]
 version = "0.1.0"
+
+[deps]
+Books = "939d5c6b-51ae-42e7-97ca-7564d0d4ad91"
