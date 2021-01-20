@@ -42,17 +42,12 @@ jobs:
           sudo apt-get install -y texlive-luatex
 
       - uses: julia-actions/setup-julia@v1
+      - name: Install Books.jl
+        run: julia --project -e 'using Pkg; 
+          Pkg.add(url="https://github.com/rikhuijzer/Books.jl")'
+
       - uses: julia-actions/julia-buildpkg@master
-      - run: julia --project -e 'using Tools; build()'
-
-      - name: Build pdf
-        run: |
-          make pdf
-          mkdir --parents build/html
-          mv build/pdf/book.pdf build/html/book.pdf
-
-      - name: Build html
-        run: make html
+      - run: julia --project -e 'using Tools; Tools.build_all()'
 
       - name: Deploy to secondary branch
         if: ${{ github.event_name == 'push' }}

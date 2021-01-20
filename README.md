@@ -20,4 +20,3 @@ The code in this repository is based on
 
 ### Icon
 
-Icon made by [smashicons](https://www.flaticon.com/authors/smashicons).

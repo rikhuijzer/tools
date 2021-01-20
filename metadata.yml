@@ -6,11 +6,10 @@ author: Rik Huijzer
 lang: en-US
 tags: [pandoc, book, my-book, etc]
 number-sections: true
-mainfont: DejaVu Sans
+mainfont: Palatino
 title-prefix: Tools
 titlepage: true
 linkReferences: true
-bibliography: references.bib
-csl: templates/apa.csl
+bibliography: pandoc/references.bib
 link-citations: true
 ---
