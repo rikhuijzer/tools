@@ -10,8 +10,8 @@ The main joy in life is attained by obtaining a newer version of the manual; all
 Now, lets say you and your team are responsible for maintaining and extending this manual.
 Maintenance is necessary because the world changes, so the manual has to be updated accordingly, and extending the manual is necessary because the people in Kernel-land are getting bored.
 At the same time, you try to minimise risks when updating the manual since earlier changes were disastrous.
-Once, you have mistakenly changed the line "I don't want to be that" into "I don't want to be dad", which led to a massive drop in childbirths.
-It took a dozen divorces to figure out that this was actually the result of a mistake in your manual, and the national news had to inform all men to get a new manual as soon as possible.
+Once, you have mistakenly changed the line "the bananas can be found on the second *aisle* to the left" into "the bananas can be found on the second *isle* to the left". 
+It took quite a lot of work to figure out this bug because, in the end, the result was the same and only the time it took to obtain the bananas differed.
 
 The main complexity is introduced by the size of the manual.
 When all working in Word documents, merging the results is laborious.
