@@ -1,9 +1,7 @@
 # Never losing your files again {#sec:git}
 
 To show why the problem of not losing files is important, lets consider Kernel-land.
-In Kernel-land, the people are not very clever.
 In Kernel-land, the people all carry an extensive manual around which they follow precisely.
-For instance, when someone in this land wants to drink water, he would
 For instance, when people in this land want to drink water, they read the according section in the manual and lift the cup to their mouth only if the manual instructs them to do so.
 Also, multiple people carry different manuals, but this is typically no issue since people can interact happily via conventions, such as shaking hands when meeting.
 The main joy in life is attained by obtaining a newer version of the manual; allowing the Kernel-landers to do new things and move around the place more quickly.
@@ -42,6 +40,8 @@ It will ensure that you never lose a file and that you don't have to struggle wi
 
 ## All your history {#sec:git-history}
 
+## Getting started
+
 To avoid losing files, we want to store our files at multiple computers.
 Therefore, we can use Git in combination with GitHub at <https://github.com>.
 Basically, GitHub is a website built around Git.
@@ -49,12 +49,34 @@ If you don't like GitHub, you can also choose to use GitLab (<https://gitlab.com
 Because these services are built around the same core, you can easily move your files from one service to the other if you want.
 First, we have to create a project to store your files or a, so called, *repository*.
 The definition of repository is "a place where things may be put for safekeeping" [@pickett2018american].
-This can be done via the web-interface.
+To get started with GitHub, create an account and a new repository via the web-interface (<https://github.com/new>).
+You can choose a nice name and ignore the checkboxes.
+In this example, we call the repository `novel-paper` and say that it is created by an example user called `researcher`.
+For the rest of this example, replace `novel-paper` and `researcher` with respectively your repository name and username.
+Next, install Git via the instructions at <https://git-scm.com/downloads>.
 
+Now, the Git robot can be talked to via the terminal. 
+(The terminal is described in [Chapter @sec:start].)
+For Git, we need to learn a few words to handle 99% of all the use-cases.
 
-The Git robot can be talked to via the terminal, as described in [Chapter @sec:start].
-For Git, we need to learn only a few words.
-
+First, we have to make a copy of the new repository `novel-paper` on our own computer so that we can make changes.
+Go to a folder where you want to store the repository and tell the robot to clone the repository:
+```
+$ git clone https://github.com/example/novel-paper
+Cloning into 'novel-paper'...
+warning: You appear to have cloned an empty repository.
+```
+or, if you did set one or more of the checkboxes:
+```
+$ git clone https://github.com/example/novel-paper
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+```
+Your output should look similar to one of these two outputs.
+Here, Git told us that some files were received (3 in this case) and everything is done.
+In both cases, you will now find a folder called `novel-paper` and we can start to add a file.
 Lets create a ridiciously important file called `ridiciously-important-file.txt` and place some text in it
 
 `ridiciously-important-file.txt`:
@@ -63,20 +85,58 @@ The solution to my research can be found in Devlin & John (2020).
 ```
 (And, no, that is not a typo. John can, in fact, be a surname like in the name Elton John, see @atkinson1991.)
 
+After doing this, we can see one of the awesome features of the Git robot.
+It knows exactly how everything looked before your changes and can show what has changed.
+To get a sort of summary of the changes, use
 ```
-git status
-```
+$ git status
+On branch master
 
-```
-git add .
-```
+No commits yet
 
-```
-git commit -m 'Update to file'
-```
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	ridiciously-important-file.txt
 
+nothing added to commit but untracked files present (use "git add" to track)
 ```
-git push
+This shows that we have added `ridiciously-important-file.txt`.
+To store this file online, lets *add* all changed files in preparation to pushing the changes to the server.
 ```
+$ git add .
+```
+This is not definitive yet, we can still check whether everything looks good:
+```
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   ridiciously-important-file.txt
+```
+As stated in the introduction of this chapter, Git is made to track complex changes.
+One way to do this is to describe in words what you're changing.
+When the previous `git status` looked good, we can make these changes permanent, or in other words, *commit* ourselves to these changes with
+```
+$ git commit -m 'Add important file'
+[master (root-commit) b4f9e1d] Add important file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ridiciously-important-file.txt
+```
+and *push* them to the server
+```
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/researcher/novel-paper
+ * [new branch]      master -> master
+```
+You can now see your file being online by going to https://github.com/<username>/<repository name>.
 
 ## Collaborating {#sec:git-collaborating}
