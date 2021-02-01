@@ -137,6 +137,9 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/researcher/novel-paper
  * [new branch]      master -> master
 ```
-You can now see your file being online by going to https://github.com/<username>/<repository name>.
+You can now see your file online by going to
+```
+https://github.com/<username>/<repository name>
+```
 
 ## Collaborating {#sec:git-collaborating}
