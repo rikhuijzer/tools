@@ -1,1 +1,1 @@
-# Converting text files to whatever you want {#sec:pandoc}
+# Converting text files {#sec:pandoc}

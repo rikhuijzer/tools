@@ -3,11 +3,11 @@ chapters = [
   "start",
   "git",
   "editing",
-  "pandoc",
   "julia",
   "data",
   "statistics",
   "ci",
+  "pandoc",
   "appendix",
   "references"
 ]
