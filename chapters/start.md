@@ -1,5 +1,23 @@
 # Where it all starts {#sec:start}
 
+For most scientists, the biggest part of the work isn't in the lab or in the field.
+It is, basically, moving text and data around.
+By this, I mean that reports have to be written and updated, data has to be cleaned, and analyses have to be run, updated and re-run.
+
+In the rest of this book, I will use the word *robot* to mean *tool* to make the book more fun.
+By talking about robots, we can anthromorphize tools and talk about things like "weird behaviour" or "complaining mode".
+At the same time, talking about these human characteristics of tools doesn't introduce confusion.
+In the end, tools are made by humans to interact with humans.
+So, many of the elements of tools are related to human behaviour.
+For example, we could even call your phone a robot.
+It just *hangs* around you all day waiting for the moment that you need it.
+When you decide to check the weather, the robot *jumps into action* and *responds* to your interactions with it.
+The phone responds to *touch* or, thanks to speech assistants, *listens* to you.
+
+## Text
+
+However, it is required to get out of your comfort zone and switch away from the tools with the lowest learning curve.
+In practise, you will come across such a wide variety of problems that eventually these tools will be limiting.
 This book argues that you should primarily focus on interacting with the computer via text.
 There are multiple reasons for this.
 Firstly, the number of things you can express with text scales exponentially with the number of words.

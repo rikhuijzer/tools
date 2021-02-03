@@ -1,0 +1,66 @@
+# Preface {#sec:preface}
+
+Artificial intelligence (AI) is lauded by many as the fourth industrial revolution.
+It promises to make better decisions and can automate more work.
+One of the largest countries in the world is spending massive resources on autonomous driving, urban congition, medical imaging, voice intelligence, visual computing, marketing intelligence, video perception, intelligent supply chains, image perception, smart education, smart homes and many more [@wu2020towards].
+In this sense, we live in exciting times.
+However, there is a common held belief that these automated analyses, machine learning, neural networks and artificial intelligence can only be achieved by large contries, or companies like DeepMind, OpenAI, Microsoft, Netflix and Amazon.
+This is false.
+Basically, what we call artificial intelligence is just machine learning [@jordan2019artificial] which is basically statistics.
+Here, it is statistics being applied by software engineers.
+The benefit of software engineerings is that they are used to managing complexity with tools.
+So, for software engineers it doesn't matter they work on the newest maching learning systems or more traditional systems.
+In both cases, the work is quite similiar.
+
+There have been failures with AI software, such as Microsoft's chatbot learning offensive language or Apple's Face ID being broken by hackers [@greenberg2017hackers].
+Still, it is mostly success stories about beating the world champion in Go matches [@deepmind2020alphago], predicting the stock market, selling more products with better recommendations.
+The success comes from the scaling capabilties.
+Once the software is correct, it can be scaled to millions of users or base analysis results on petabytes of data.
+
+However, software engineering isn't part of the typical scientist's skillset.
+Non-engineering students are taught to do statistical analyses in convenient statistical software with graphical user interfaces, such as Excel, SPSS, JAGS or JASP.
+The problem with these tools is that they cannot solve any computation problem.
+In their daily life, they will run into problems which are out of the scope of these convenient tools.
+This while the **real** tools, general-purpose programming lanuages, have never been easier to use.
+Everything you need to automate analyses and work with AI is publicly and freely available.
+
+This explains why I decided to write this book.
+With a background in computer science, I have transitioned to a PhD in Psychology.
+Here, I see that days are fully spent behind a computer while being hindered by the convenient tools.
+I hear the same stories from colleagues in the medical, biological, chemical and mathematical sciences.
+I've even heard professors talk about some of their tasks being laborious while knowing that I use tools for these tasks.
+Unfortunately, I know that these tools cannot be learned in a day since learning only one of them is not enough.
+Combining the tools it this book is where the real power lies.
+I've often convinced people of some tool by amazing them with the speed.
+However, on their way home, they would realise that the tool doesn't work in their workflow.
+That's why I wrote this book: to show the whole picture instead of just one tool.
+Also, with this book I aim to present the essentials.
+These essentials will remain applicable for many years to come and allow you to easily switch to other tools.
+
+## Audience
+
+This book is aimed at scientists.
+Actually, most chapters will work for most office jobs, but the book is written with scientists in mind.
+This book shows you the tools to get rid of your tedious tasks and how to manage complexity effectively with the proper software.
+Software can do this for you because if you read this on a electronic device, then you probably don't know how the transistors, registors, instruction sets, assembly code or application code works.
+However, this complexity is all hidden away for you and you can assume all parts to do the work for you.
+
+## Reading this book
+
+The chapters will build on top of each other in the sense that later chapters are easier when the tools of easier chapters are used.
+For example, later chapters include more code which is managed best via version control.
+Some people will say that this book is too extreme; some of the presented tools could be replaced by a more beginner friendly version.
+Unfortunately, those friendlier versions will not teach you the basics.
+It will be easy to switch from the tools in this book to friendlier versions, but not the reverse.
+Also, friendlier tools are friendlier by assuming things for you.
+This is nice if you want to stick to their conventions, but if you want something outside of what they provide, you're out of luck.
+Then, the only way to get it is to go back to the more basic tools or to ask the developer to implement your feature.
+Also, these basic tools are used by more other tools and people, so more effort is put into the development.
+That, in turn, usually results in the tools being more reliable, better documented and more performant.
+As another argument, these basics will allow you to combine the tools more easily, giving you more power.
+
+## Acknowledgements
+
+Many people have contributed directly and indirectly to this book.
+My PhD supervisors have allowed me to do my work with any tools I prefer.
+This allowed me to experiment with different tools while keeping in mind that things have to get done.
