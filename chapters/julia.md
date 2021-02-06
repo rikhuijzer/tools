@@ -1,4 +1,6 @@
-# Doing any calculation {#sec:julia}
+# Automating tasks {#sec:julia}
+
+From this chapter on, the book uses the Julia programming language.
 
 Contents:
 

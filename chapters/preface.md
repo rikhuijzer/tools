@@ -30,7 +30,7 @@ Here, I see that days are fully spent behind a computer while being hindered by 
 I hear the same stories from colleagues in the medical, biological, chemical and mathematical sciences.
 I've even heard professors talk about some of their tasks being laborious while knowing that I use tools for these tasks.
 Unfortunately, I know that these tools cannot be learned in a day since learning only one of them is not enough.
-Combining the tools it this book is where the real power lies.
+Combining the tools in this book is where the real power lies.
 I've often convinced people of some tool by amazing them with the speed.
 However, on their way home, they would realise that the tool doesn't work in their workflow.
 That's why I wrote this book: to show the whole picture instead of just one tool.

@@ -1,6 +1,6 @@
 ---
 title: Tools for Science
-subtitle: Making robots do the work and manage complexity
+subtitle: Automate work and manage complexity
 book: true
 author: Rik Huijzer
 lang: en-US
@@ -8,6 +8,7 @@ tags: [pandoc, book, my-book, etc]
 number-sections: true
 mainfont: Palatino
 title-prefix: Tools
+secPrefix: Section
 titlepage: true
 linkReferences: true
 bibliography: pandoc/references.bib
