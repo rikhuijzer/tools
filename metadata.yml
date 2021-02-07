@@ -13,4 +13,6 @@ titlepage: true
 linkReferences: true
 bibliography: pandoc/references.bib
 link-citations: true
+colorlinks: true
+linkcolor: blue
 ---
