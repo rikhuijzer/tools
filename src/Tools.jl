@@ -6,6 +6,14 @@ import Pkg
 const project_root = dirname(dirname(pathof(Tools)))
 const build_dir = joinpath(project_root, "build")
 
+"""
+    output_path(file)
+
+Returns output path in `build_dir` for `file`.
+This appends `.md` because Pandoc can only include Markdown files anyway.
+"""
+output_path(file) = joinpath(build_dir, "$file.md")
+
 function git_version_text()
     io = IOBuffer()
     cmd = `git rev-parse HEAD`
@@ -17,7 +25,7 @@ function git_version_text()
     """
 end
 
-function versions()
+function julia_and_pkgs_info()
     io = IOBuffer()
     Pkg.status(; io)
     text = String(take!(io))
@@ -34,21 +42,33 @@ function versions()
     """
 end
 
-function all_version_text()
+function versions_info(file)
     text = """
-    $(versions())
+    $(julia_and_pkgs_info())
     
     $(git_version_text())
     """
-    path = joinpath(build_dir, "versions.md")
+    path = output_path(file)
     write(path, text)
 end
 
-function build_all()
+function build_targets(targets)
+    for (file, func) in targets
+        println("Running function $func for $file")
+        func(file)
+    end
+end
+
+function build()
     println("Building tools")
     rm(build_dir; force=true, recursive=true)
     mkpath(build_dir)
-    all_version_text()
+
+    targets = [
+        ("versions", versions_info),
+    ]
+    build_targets(targets)
+
     Books.build_all()
 end
 
