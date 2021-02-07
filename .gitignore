@@ -1,3 +1,5 @@
 build/
+_generated/
 *.log
 Manifest.toml
+

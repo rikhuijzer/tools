@@ -12,6 +12,10 @@ This is particulary helpful for code reviews when deciding whether the changes s
 
 **TODO:** Add image with green GitHub checkmark on PR.
 
+```{.include}
+_generated/green-ci.md
+```
+
 CD is also about running computations upon code changes.
 This time however, the computations can do things like compiling the code into an executable.
 The executable can then continuously be delivered to the end-user, hence the name CD.

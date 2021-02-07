@@ -3,16 +3,20 @@ module Tools
 import Books
 import Pkg
 
+include("images.jl")
+
 const project_root = dirname(dirname(pathof(Tools)))
 const build_dir = joinpath(project_root, "build")
+const generated_dir = joinpath(project_root, "_generated")
+mkpath(generated_dir)
 
 """
     output_path(file)
 
-Returns output path in `build_dir` for `file`.
+Returns output path in `generated_dir` for `file`.
 This appends `.md` because Pandoc can only include Markdown files anyway.
 """
-output_path(file) = joinpath(build_dir, "$file.md")
+output_path(file) = joinpath(generated_dir, "$file.md")
 
 function git_version_text()
     io = IOBuffer()
@@ -66,6 +70,7 @@ function build()
 
     targets = [
         ("versions", versions_info),
+        ("green-ci", green_ci),
     ]
     build_targets(targets)
 

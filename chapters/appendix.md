@@ -3,5 +3,5 @@
 ## Versions
 
 ```{.include}
-build/versions.md
+_generated/versions.md
 ```
