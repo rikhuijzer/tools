@@ -26,7 +26,7 @@ jobs:
       - name: Install Pandoc and LaTeX dependencies
         run: julia --project -e 'using Books; Books.install_dependencies()'
         
-      - run: julia --project -e 'using Tools; Tools.build_all()'
+      - run: julia --project -e 'using Tools; Tools.build()'
 
       - name: Deploy to secondary branch
         if: ${{ github.event_name == 'push' }}
