@@ -9,6 +9,7 @@ number-sections: true
 mainfont: Palatino
 title-prefix: Tools
 secPrefix: Section
+figPrefix: Figure
 titlepage: true
 linkReferences: true
 bibliography: pandoc/references.bib
