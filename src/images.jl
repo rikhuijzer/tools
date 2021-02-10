@@ -10,6 +10,15 @@ function write_svg(file, p; w=6inch, h=4inch)
     joinpath("im", filename)
 end
 
+"""
+    svg2png(svg_path, png_path)
+
+Unlike ImageMagick, this program gets the text spacing right.
+"""
+function svg2png(svg_path, png_path)
+    run(`cairosvg $svg_path -o $png_path`)
+end
+
 function write_svg_and_md(file, p; caption=file, w=6inch, h=4inch)
     image_path = write_svg(file, p; w, h)
     text = """
