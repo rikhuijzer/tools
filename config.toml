@@ -2,12 +2,12 @@ chapters = [
   "preface",
   "start",
   "git",
-  "editing",
+  "pandoc",
   "julia",
   "data",
   "statistics",
   "ci",
-  "pandoc",
+  "editing",
   "appendix",
   "references"
 ]

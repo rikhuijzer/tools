@@ -10,6 +10,7 @@ mainfont: Palatino
 title-prefix: Tools
 secPrefix: Section
 figPrefix: Figure
+tblPrefix: Table
 titlepage: true
 linkReferences: true
 bibliography: pandoc/references.bib

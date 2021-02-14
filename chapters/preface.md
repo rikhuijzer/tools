@@ -2,19 +2,19 @@
 
 Artificial intelligence (AI) is lauded by many as the fourth industrial revolution.
 It promises to make better decisions and can automate more work.
-One of the largest countries in the world is spending massive resources on autonomous driving, urban congition, medical imaging, voice intelligence, visual computing, marketing intelligence, video perception, intelligent supply chains, image perception, smart education, smart homes and many more [@wu2020towards].
+One of the largest countries in the world is spending massive resources on autonomous driving, urban cognition, medical imaging, voice intelligence, visual computing, marketing intelligence, video perception, intelligent supply chains, image perception, smart education, smart homes and many more [@wu2020towards].
 In this sense, we live in exciting times.
-However, there is a common held belief that these automated analyses, machine learning, neural networks and artificial intelligence can only be achieved by large contries, or companies like DeepMind, OpenAI, Microsoft, Netflix and Amazon.
+However, there is a common held belief that these automated analyses, machine learning, neural networks and artificial intelligence can only be achieved by large countries, or companies like DeepMind, OpenAI, Microsoft, Netflix and Amazon.
 This is false.
 Basically, what we call artificial intelligence is just machine learning [@jordan2019artificial] which is basically statistics.
 Here, it is statistics being applied by software engineers.
 The benefit of software engineerings is that they are used to managing complexity with tools.
 So, for software engineers it doesn't matter they work on the newest maching learning systems or more traditional systems.
-In both cases, the work is quite similiar.
+In both cases, the work is quite similar.
 
 There have been failures with AI software, such as Microsoft's chatbot learning offensive language or Apple's Face ID being broken by hackers [@greenberg2017hackers].
 Still, it is mostly success stories about beating the world champion in Go matches [@deepmind2020alphago], predicting the stock market, selling more products with better recommendations.
-The success comes from the scaling capabilties.
+The success comes from the scaling capabilities.
 Once the software is correct, it can be scaled to millions of users or base analysis results on petabytes of data.
 
 However, software engineering isn't part of the typical scientist's skillset.
@@ -28,8 +28,8 @@ This explains why I decided to write this book.
 With a background in computer science, I have transitioned to a PhD in Psychology.
 Here, I see that days are fully spent behind a computer while being hindered by the convenient tools.
 I hear the same stories from colleagues in the medical, biological, chemical and mathematical sciences.
-I've even heard professors talk about some of their tasks being laborious while knowing that I use tools for these tasks.
-Unfortunately, I know that these tools cannot be learned in a day since learning only one of them is not enough.
+I've even heard professors talk about some of their tasks being laborious while knowing that many great tools can easily automate these tasks.
+Unfortunately, I know that using these tools cannot be learned in a day; learning only one of them is not enough.
 Combining the tools in this book is where the real power lies.
 I've often convinced people of some tool by amazing them with the speed.
 However, on their way home, they would realise that the tool doesn't work in their workflow.
@@ -48,6 +48,7 @@ However, this complexity is all hidden away for you and you can assume all parts
 ## Reading this book
 
 The chapters will build on top of each other in the sense that later chapters are easier when the tools of easier chapters are used.
+Also, I've tried to order the chapters by decreasing importance.
 For example, later chapters include more code which is managed best via version control.
 Some people will say that this book is too extreme; some of the presented tools could be replaced by a more beginner friendly version.
 Unfortunately, those friendlier versions will not teach you the basics.
@@ -58,6 +59,9 @@ Then, the only way to get it is to go back to the more basic tools or to ask the
 Also, these basic tools are used by more other tools and people, so more effort is put into the development.
 That, in turn, usually results in the tools being more reliable, better documented and more performant.
 As another argument, these basics will allow you to combine the tools more easily, giving you more power.
+Other people will call this book opinionated, and push for other tools.
+That is why I've spent a great amount of arguing for the merits of each tool.
+If you already use another similar too and are happy with it, then please skip the chapter in this book.
 
 ## Acknowledgements
 
