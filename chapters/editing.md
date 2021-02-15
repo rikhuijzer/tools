@@ -13,7 +13,7 @@ Over time, the time and effort spent on these tasks count up.
 > Four young women found out I was in Customer Service, cornered me, and talked for fifteen minutes about how much they missed Mailman and Emacs, and how Arizona (the JSP replacement we'd spent years developing) still just wasn't doing it for them. 
 
 This is mostly because these editors help you in getting things done more quickly.
-In the rest of this chapter, I will provide a quick-start for Vi which is roughly the same as Vim (<www.vim.org>) and Neovim (<https://neovim.io>).
+In the rest of this chapter, I will provide a quick-start for Vi which is roughly the same as Vim ([www.vim.org](https://www.vim.org)) and Neovim (<https://neovim.io>).
 Vim is an improved version of Vi and Neovim is created by a group of developers who weren't happy with Vim and decided to work on their own copied version.
 Both editors can be used mostly interchangibly and that is why I mean Vi, Vim or Neovim when I mention Vim.
 I personally prefer Neovim, but Vim works great too.
@@ -21,7 +21,7 @@ That this book focusses on Vim doesn't mean that I don't like it's direct compet
 I think both Vim and Emacs can save users tremendeous amounts of time.
 For me, Vim seemed more suitable, because it's less oriented around only a few keys making it less prone to repetitive strain injury.
 Also, Emacs wasn't as quick.
-On the other hand, Emacs has many great productivity enhancing tools such as Org-mode (https://orgmode.org).
+On the other hand, Emacs has many great productivity enhancing tools such as Org-mode (<https://orgmode.org>).
 So, both have their pro's and con's.
 If you're unable to do touch typing, then consider reading Chris Wellons' blog about Vim and touch typing (<https://nullprogram.com/blog/2017/04/01/>).
 

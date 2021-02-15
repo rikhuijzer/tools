@@ -8,10 +8,10 @@ CI arose from the need to validate code changes, in version control such as Git,
 Upon each code change, a server takes the code and runs all the tests.
 When the tests pass, you can be more sure that the changes are correct;
 when the tests fail, you know that something is broken.
-This is particulary helpful for code reviews when deciding whether the changes should be merged in the codebase, see @fig:green-ci.
+This is particulary helpful for code reviews when deciding whether the changes should be merged in the codebase, see @fig:green_ci.
 
 ```{.include}
-_generated/green-ci.md
+_generated/green_ci.md
 ```
 
 CD is also about running computations upon code changes.

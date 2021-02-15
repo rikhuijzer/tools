@@ -46,21 +46,12 @@ function julia_and_pkgs_info()
     """
 end
 
-function versions_info(file)
+function versions()
     text = """
     $(julia_and_pkgs_info())
     
     $(git_version_text())
     """
-    path = output_path(file)
-    write(path, text)
-end
-
-function build_targets(targets)
-    for (file, func) in targets
-        println("Running function $func for $file")
-        func(file)
-    end
 end
 
 function build()
@@ -68,12 +59,7 @@ function build()
     rm(build_dir; force=true, recursive=true)
     mkpath(build_dir)
 
-    targets = [
-        ("versions", versions_info),
-        ("green-ci", green_ci),
-    ]
-    build_targets(targets)
-
+    Books.generate_dynamic_content(; M=Tools, fail_on_error=true)
     Books.build_all()
 end
 

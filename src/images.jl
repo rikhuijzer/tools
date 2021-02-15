@@ -19,18 +19,16 @@ function svg2png(svg_path, png_path)
     run(`cairosvg $svg_path -o $png_path`)
 end
 
-function write_svg_and_md(file, p; caption=file, w=6inch, h=4inch)
+function image_and_caption(file, p; caption=file, w=6inch, h=4inch)
     image_path = write_svg(file, p; w, h)
     text = """
     ![$caption]($image_path){#fig:$file}
     """
-    md_path = output_path(file)
-    write(md_path, text)
 end
 
 line(x0, y0, x1, y1) = Compose.line([[(x0, y0), (x1, y1)]])
 
-function green_ci(file)
+function green_ci()
     c = context()
     composition = compose(c, 
         (c, text(0.07, 0.18, "John Doe"), fontsize(16px)),
@@ -51,5 +49,6 @@ function green_ci(file)
     Simplified view of the GitHub interface for pull-requests.
     It shows that John Doe did a failing commit and fixed it afterwards.
     """
-    write_svg_and_md(file, composition; caption, w=4inch, h=2inch)
+    file = "green_ci"
+    image_and_caption(file, composition; caption, w=4inch, h=2inch)
 end

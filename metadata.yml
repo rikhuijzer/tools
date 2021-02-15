@@ -6,7 +6,6 @@ author: Rik Huijzer
 lang: en-US
 tags: [pandoc, book, my-book, etc]
 number-sections: true
-mainfont: Palatino
 title-prefix: Tools
 secPrefix: Section
 figPrefix: Figure
