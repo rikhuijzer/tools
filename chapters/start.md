@@ -11,7 +11,7 @@ To do so effectively, [@sec:interacting] argues that you should primarily focus 
 To get things done on a computer effectively, the focus should be on interacting with it via text.
 There are multiple reasons for this.
 Firstly, the number of things you can express with text scales exponentially with the number of words.
-For instance: given 26 letters in the alphabet, you can express $26$ different things with one letter, $26 \cdot 26$ different things with two letters, to $26^n$ different things with $n$ letters.
+For instance: given 26 letters in the alphabet, you can express $26$ different things with one letter, $26 \cdot 26$ different things with two letters, to $26^n$ different things with $n$ letters; also known as ordered sampling with replacement.
 So, suppose all the programs in the world are required to be 7 letters, like `bigtree`, and all the programs take 3 letters of input.
 Then, you can choose from $26 \cdot 7 = 8.0 \cdot 10^9$ programs, and each program can take $26^3 \approx 17.500$ different inputs.
 Imagine having $8.0 \cdot 10^9$ icons on your desktop and, after opening a program, being presented with $17.500$ buttons.
@@ -29,6 +29,12 @@ whereas, graphical user interface users have to rely on tutorials such as:
 > Then, click on "move" and drag `A` to `B` in the window.
 
 which is confusing and verbose.
+Another argument is that text is "the most powerful, useful, effective communication technology" because it [@hoare2014bet]
+
+- is the most stable, that is, can be read in many years from now,
+- can express many (abstract) things which can't be expressed in images such as "Human rights are moral principles" and
+- is the most efficient communication technology.
+
 Finally, tools are written in code, which is basically text.
 Therefore, the default interface between tools is text, and a GUI is often just a layer on top.
 In the best case, software built on top of of other software implements all features, but usually the upper layers only contain a subset.
