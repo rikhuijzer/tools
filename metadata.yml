@@ -4,7 +4,13 @@ subtitle: Automate work and manage complexity
 book: true
 author: Rik Huijzer
 lang: en-US
-tags: [pandoc, book, my-book, etc]
+tags: [pandoc, Books.jl, tools, science, Git, JuliaLang]
+repo: https://github.com/rikhuijzer/tools
+geometry:
+  - top=20mm
+  - left=24mm
+  - right=24mm
+  - bottom=28mm
 number-sections: true
 title-prefix: Tools
 secPrefix: Section
