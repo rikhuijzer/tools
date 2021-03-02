@@ -1,13 +1,13 @@
-chapters = [
+contents = [
   "preface",
   "start",
   "git",
+  "editing",
   "pandoc",
   "julia",
   "data",
   "statistics",
   "ci",
-  "editing",
   "appendix",
   "references"
 ]
