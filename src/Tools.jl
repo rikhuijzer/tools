@@ -59,7 +59,7 @@ function build()
     rm(build_dir; force=true, recursive=true)
     mkpath(build_dir)
 
-    Books.generate_dynamic_content(; M=Tools, fail_on_error=true)
+    Books.generate_content(; M=Tools, fail_on_error=true)
     Books.build_all()
 end
 
