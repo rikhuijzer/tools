@@ -22,10 +22,10 @@ jobs:
       - name: Install Books.jl
         run: julia --project -e 'using Pkg; 
           Pkg.add(url="https://github.com/rikhuijzer/Books.jl")'
-
-      - uses: julia-actions/julia-buildpkg@master
-      - name: Install Pandoc and LaTeX dependencies
-        run: julia --project -e 'using Books; Books.install_dependencies()'
+      
+      - name: Install Pandoc, LaTeX and other dependencies
+        run: sudo CI=true julia --project -e 'using Pkg; Pkg.instantiate();
+                using Books; Books.install_dependencies()'
 
       - run: julia --project -e 'using Tools; Tools.build()'
 
@@ -37,4 +37,3 @@ jobs:
           cname: tools.huijzer.xyz
           force_orphan: true
           publish_dir: ./build/
-
