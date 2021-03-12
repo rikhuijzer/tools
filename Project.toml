@@ -11,6 +11,7 @@ Gadfly = "c91e804a-d5a3-530f-b6f0-dfbca275c004"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 
 [compat]
+Books = "0.1"
 Colors = "0.12"
 Compose = "0.9"
 Gadfly = "1.3"
