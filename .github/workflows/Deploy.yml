@@ -19,12 +19,19 @@ jobs:
         with:
           version: "^1.6.0-0"
 
-      - name: Install Books.jl
-        run: julia --project -e 'using Pkg; 
-          Pkg.add(url="https://github.com/rikhuijzer/Books.jl")'
-      
+      - uses: actions/cache@v1
+        env:
+          cache-name: cache-artifacts
+        with:
+          path: ~/.julia/artifacts
+          key: ${{ runner.os }}-test-${{ env.cache-name }}-${{ hashFiles('**/Project.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-test-${{ env.cache-name }}-
+            ${{ runner.os }}-test-
+            ${{ runner.os }}-
+
       - name: Install Pandoc, LaTeX and other dependencies
-        run: sudo CI=true julia --project -e 'using Pkg; Pkg.instantiate();
+        run: julia --project -e 'using Pkg; Pkg.instantiate();
                 using Books; Books.install_dependencies()'
 
       - run: julia --project -e 'using Tools; Tools.build()'
