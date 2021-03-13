@@ -1,15 +1,18 @@
-contents = [
-  "preface",
-  "start",
-  "git",
-  "editing",
-  "pandoc",
-  "julia",
-  "data",
-  "statistics",
-  "ci",
-  "appendix",
-  "references"
-]
+[projects]
 
-pdf_filename = "tools"
+  [projects.default]
+  contents = [
+    "preface",
+    "start",
+    "git",
+    "editing",
+    "pandoc",
+    "julia",
+    "data",
+    "statistics",
+    "ci",
+    "appendix",
+    "references"
+  ]
+
+  output_filename = "tools"
