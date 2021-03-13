@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install Pandoc, LaTeX and other dependencies
-        run: sudo CI=true julia --project -e 'using Pkg; Pkg.instantiate();
+        run: julia --project -e 'using Pkg; Pkg.instantiate();
                 using Books; Books.install_dependencies()'
 
       - run: julia --project -e 'using Tools; Tools.build()'
