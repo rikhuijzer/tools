@@ -10,6 +10,6 @@ Compose = "a81c6b42-2e10-5240-aca2-a61377ecd94b"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 
 [compat]
-Books = "0.1, 0.2"
+Books = "0.3"
 Colors = "0.12"
 Compose = "0.9"

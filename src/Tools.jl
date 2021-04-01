@@ -16,7 +16,7 @@ const M = Tools
 
 function build()
     println("Building tools")
-    Books.generate_content(; M=Tools, fail_on_error=true)
+    Books.gen(; M=Tools, fail_on_error=true)
     Books.build_all()
 end
 

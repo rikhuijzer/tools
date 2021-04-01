@@ -15,7 +15,7 @@ For instance: given 26 letters in the alphabet, you can express $26$ different t
 So, suppose all the programs in the world are required to be 7 letters, like `bigtree`, and all the programs take 3 letters of input.
 Then, you can choose from $26 \cdot 7 = 8.0 \cdot 10^9$ programs, and each program can take $26^3 \approx 17.500$ different inputs.
 Imagine having $8.0 \cdot 10^9$ icons on your desktop and, after opening a program, being presented with $17.500$ buttons.
-Another benefit of text is that you can exchange it easily via online communcations.
+Another benefit of text is that you can exchange it easily via online communications.
 A tutorial for a text-based tool includes sentences such as:
 
 > After that, run
@@ -44,29 +44,82 @@ This is a bit like building your house from construction plans; only to realise 
 
 ## Command line {#sec:command-line}
 
-This book supports readers on the Microsoft Windows, Apple MacOS and Linux operating systems.
-All these operating systems include a _command line_.
-(Also known as the _terminal (emulator)_.)
+Before operating systems, such as Microsoft Windows, Apple MacOS and Linux, included fancy graphical user interfaces based around icons, the mouse and draggable windows, all the work was done from the terminal.
+For example, an MS-DOS computer booting into something looking like
+
+```
+MS-DOS version 4.00
+Copyright 1981,82,83,84,85 Microsoft Corp.
+
+C>echo Hello
+Hello
+```
+
+From this terminal, you could do anything you want.
+You could start programs, move files, edit spreadsheets and send documents to printers.
+However, although this is quite powerful, it is also unwieldy because the most basic terminals only allow you to do one tasks at the same time.
+Also, browsing the web is difficult, because it is full of pictures and moving elements which can't be represented nicely via text.
+That is why modern operating systems, by default, are built around the graphical user interface and still allow you to run something which looks like a terminal in a window.
+This is also known as a _terminal emulator_.
+The terminal emulator allows you to execute commands.
+Specifically, it allows you to type a command which the system will then run.
+Next, it will show you the output on the next line(s).
+For example, to make a directory on Windows called `analysis` and rename it to `old-analysis`, you can do
+
+```
+Microsoft Windows [Version 10.0.18363.1316]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\John> mkdir tmp
+
+C:\Users\John> cd tmp
+
+C:\Users\John\tmp> mkdir analyis
+
+C:\Users\John\tmp> dir
+[...]
+04/01/2021  09:36 PM     <DIR>     analysis
+[...]
+
+C:\Users\John\tmp> rename analysis old-analysis
+
+C:\Users\John\tmp> dir
+[...]
+04/01/2021  09:36 PM     <DIR>     old-analysis
+[...]
+```
+
+This behaviour with commands and its output on new lines is why a terminal emulator is also known as a _command line_.
 From the command line, you can start applications via text.
-Here, the book will divert for a bit between operating systems, but this is only temporalily.
-From [@sec:julia] onwards, the knowledge is generic again.
+In the rest of this chapter, the book will divert for a bit between operating systems, but this is only temporarily.
 
-### Windows
+As a simple example, lets open the site of Stanford University in your favorite browser.
+In this example, I assume that Firefox is your favourite browser, but you can also use
 
-### Apple
+- Chrome via `chrome`,
+- Safari via `safari` _or_
+- Edge via `msedge`.
 
-*different assignment per OS, for example, open browser.*
+**Windows:**
 
-### Linux
+Start the Command Prompt and type
 
-If you're only Linux, then you know where the terminal is.
+```
+start firefox https://stanford.edu
+```
 
-need: 
-- cd
+**Apple:**
 
-firefox
+...
 
-Subsections:
+**Linux:**
 
-- Set up terminal with memory; fuzzy search (nope, this is advanced an should be appendix)
-- Window management and shortcuts.
+Start the terminal and type
+
+```
+firefox https://stanford.edu
+```
+
+## Commands
+
+
