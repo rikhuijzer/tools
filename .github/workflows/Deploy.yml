@@ -30,14 +30,16 @@ jobs:
             ${{ runner.os }}-test-
             ${{ runner.os }}-
 
+      # Usually, I'm locally working with Books.jl via `Pkg.dev`.
+      - name: Install Books.jl#master
+        run: julia --project -e 'using Pkg; 
+          Pkg.add(url="https://github.com/rikhuijzer/Books.jl#master");'
+      
       - name: Install Pandoc, LaTeX and other dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate();
                 using Books; Books.install_dependencies()'
-
-      - run: julia --project -e '
-          # Since I'm locally making changes via `Pkg.dev` most of the time.
-          using Pkg; Pkg.add(url="https://github.com/rikhuijzer/Books.jl#master");
-          using Tools; Tools.build()'
+       
+      - run: julia --project -e 'using Tools; Tools.build()'
 
       - name: Deploy to secondary branch
         if: ${{ github.event_name == 'push' }}
