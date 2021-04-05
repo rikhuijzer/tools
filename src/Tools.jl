@@ -1,16 +1,13 @@
 module Tools
 
-import Books
 import Pkg
 
+using Books
 using Colors
 using Compose
 
 include("includes.jl")
 include("images.jl")
-
-# Convenient for calling `generate_content(; M)`.
-export M
 
 const M = Tools
 

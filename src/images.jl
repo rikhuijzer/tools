@@ -29,6 +29,5 @@ function green_ci()
     It shows that John Doe did a failing commit and fixed it afterwards.
     """
 
-    # Needs an update of Books.jl to pass caption.
-    return composition
+    Options(composition; caption)
 end

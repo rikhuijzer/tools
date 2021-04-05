@@ -3,7 +3,7 @@
 ## Versions
 
 ```{.include}
-_generated/versions.md
+_gen/versions.md
 ```
 
 ## i3wm

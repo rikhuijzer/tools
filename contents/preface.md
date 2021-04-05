@@ -63,6 +63,63 @@ Other people will call this book opinionated, and push for other tools.
 That is why I've spent a great amount of arguing for the merits of each tool.
 If you already use another similar too and are happy with it, then please skip the chapter in this book.
 
+## Notation {#sec:notation}
+
+To keep the text short and clear, this book uses mathematical notation.
+For example, instead of "the mean for the random samples equals three", we write
+
+$$ \text{mean}(X) = 3, $$
+
+where $X$ are the samples or:
+let $X$ denote the random samples, then
+
+$$ \text{mean}(X) = 3. $$
+
+In this book, I tried to keep the notation consistent, as well as as close to the code as possible.
+Therefore, a single value will be denoted by a lowercase symbol, such as $x$ and a vector or matrix will be denoted by an uppercase symbol, such as $X$.
+By default, a vector is assumed to be a column vector like, for example,
+
+$$ X = \begin{bmatrix}
+           1 \\
+           2 \\
+         \end{bmatrix} $$
+
+Or, more generally, a vector of length $n$ is denoted by
+
+$$ X_n = \begin{bmatrix}
+           x_1 \\
+           x_2 \\
+           \vdots \\
+           x_n
+         \end{bmatrix}. $$
+
+Similarily, a matrix with $n$ rows and $m$ columns is denoted by $X_{n \times m}$.
+Note that a vector is just a one dimensional matrix;
+hence,
+
+$$ X_{n} = X_{n \times 1}. $$
+
+These sizes in the subscript are omitted when possible.
+Transposition for a vector or matrix is denoted by $T$.
+So, for example,
+
+$$ X_n^T = [ x_1, x_2, ..., x_n ]. $$
+
+For functions, I try to be explicit about the variables, that is, try to have as little state as possible in the functions.
+So, for example, instead of writing a linear model as
+
+$$ y = w_0 + w_1 x, $$
+
+or
+
+$$ y(X) = w_0 + w_1 x_1, $$
+
+I favor
+
+$$ \text{lm}(X, W) = w_0 + w_1 x_1, $$
+
+where $\text{lm}$ could be any name.
+
 ## Acknowledgements
 
 Many people have contributed directly and indirectly to this book.

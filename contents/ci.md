@@ -11,7 +11,7 @@ when the tests fail, you know that something is broken.
 This is particulary helpful for code reviews when deciding whether the changes should be merged in the codebase, see @fig:green_ci.
 
 ```{.include}
-_generated/green_ci.md
+_gen/green_ci.md
 ```
 
 CD is also about running computations upon code changes.
