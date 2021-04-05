@@ -86,13 +86,14 @@ $$ X = \begin{bmatrix}
 
 Or, more generally, a vector of length $n$ is denoted by
 
-$$ X_n = \begin{bmatrix}
+$$ X_{n} = \begin{bmatrix}
            x_1 \\
            x_2 \\
            \vdots \\
            x_n
-         \end{bmatrix}. $$
+         \end{bmatrix}, $$
 
+where $x_1, ..., x_n$ denote single values from the vector $X$.
 Similarily, a matrix with $n$ rows and $m$ columns is denoted by $X_{n \times m}$.
 Note that a vector is just a one dimensional matrix;
 hence,

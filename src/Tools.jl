@@ -5,11 +5,11 @@ import Pkg
 using Books
 using Colors
 using Compose
+using Distributions
 
 include("includes.jl")
 include("images.jl")
-
-const M = Tools
+include("frequentist.jl")
 
 function build()
     println("Building tools")

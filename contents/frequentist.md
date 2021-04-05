@@ -7,9 +7,21 @@ However, here we focus on the combination with the frequentists tests, which is 
 
 In line with @bishop2006pattern, generally, we can write a linear model $\text{lm}$ as
 
-$$ \text{lm}(X_n, W_{n+1}) = w_0 + w_1 x_1 + ... + w_n x_n, $$
+$$ \text{lm}(X_{v}, W_{m}) = w_0 + w_1 x_1 + ... + w_m x_v, $$
 
-with input variables $X_n$ and weights $W_{n+1}$.
+with input variables $X_v$ and weights $W_m$.
+Note that this means that the data with $n$ measurements can be stored in a $n \times v$ matrix.
+For the rest of this chapter, we assume that the errors are Gaussian.
 
+### t-test
 
+Given the scores for two groups, respectively denoted by $A$ and $B$, and assuming equal variances, we can formulate the Student's t-test as a linear model with only the intercept:
 
+$$ \text{t\_test\_lm}(X_v, W) = w_0 $$
+
+In other words, when using this model to predict whether somescore belongs in $A$ or $B$, a simple threshold is used.
+For example, we can generate data from two normal distributions
+
+```{.include}
+_gen/t_test_data-sc.md
+```
