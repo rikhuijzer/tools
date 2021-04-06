@@ -122,4 +122,6 @@ firefox https://stanford.edu
 
 ## Commands
 
+If you want to know more about commands, this section will list some common ones.
+Otherwise, you can skip this section and come back to it when you need it.
 

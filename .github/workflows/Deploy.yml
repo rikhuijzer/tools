@@ -34,15 +34,15 @@ jobs:
       - name: Install Books.jl#master
         run: julia --project -e 'using Pkg; 
           Pkg.add(url="https://github.com/rikhuijzer/Books.jl#master");'
-      
+
       - name: Install Pandoc, LaTeX and other dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate();
                 using Books; Books.install_dependencies()'
-       
+
       - run: julia --project -e 'using Tools; Tools.build()'
 
       - name: Deploy to secondary branch
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
