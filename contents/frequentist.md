@@ -13,15 +13,26 @@ with input variables $X_v$ and weights $W_m$.
 Note that this means that the data with $n$ measurements can be stored in a $n \times v$ matrix.
 For the rest of this chapter, we assume that the errors are Gaussian.
 
-### t-test
+### One sample
 
-Given the scores for two groups, respectively denoted by $A$ and $B$, and assuming equal variances, we can formulate the Student's t-test as a linear model with only the intercept:
-
-$$ \text{t\_test\_lm}(X_v, W) = w_0 $$
-
-In other words, when using this model to predict whether somescore belongs in $A$ or $B$, a simple threshold is used.
-For example, we can generate data from two normal distributions
+Say that you have a vector of sample values `A` and want to test whether the mean of the population is $x$.
+For illustration purposes, lets generate some data:
 
 ```{.include}
-_gen/t_test_data-sc.md
+_gen/one_sample_data-sc.md
 ```
+
+which is visualized in @fig:plot_one_sample_data.
+
+```{.include}
+_gen/plot_one_sample_data.md
+```
+
+To test the mean, we can start by guessing the mean of the sample, see @fig:plot_one_sample_data_mean.
+
+```{.include}
+_gen/plot_one_sample_data_mean.md
+```
+
+$$ \text{one\_sample}(X_v, W) = w_0 $$
+

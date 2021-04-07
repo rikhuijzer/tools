@@ -5,7 +5,11 @@ import Pkg
 using Books
 using Colors
 using Compose
+using Gadfly
+using DataFrames
 using Distributions
+using Random
+using Statistics
 
 include("includes.jl")
 include("images.jl")
