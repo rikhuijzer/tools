@@ -40,9 +40,3 @@ function plot_one_sample_data_mean()
     caption = "$n normally distributed points with μ = $μ and σ = $σ"
     options = Options(imo; caption)
 end
-
-function g()
-    1
-end
-
-@memoize h() = 1
