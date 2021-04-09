@@ -17,7 +17,7 @@ jobs:
 
       - uses: julia-actions/setup-julia@v1
         with:
-          version: "^1.6.0-0"
+          version: "1.6"
 
       - uses: actions/cache@v1
         env:
@@ -31,9 +31,9 @@ jobs:
             ${{ runner.os }}-
 
       # Usually, I'm locally working with Books.jl via `Pkg.dev`.
-      - name: Install Books.jl#master
-        run: julia --project -e 'using Pkg; 
-          Pkg.add(url="https://github.com/rikhuijzer/Books.jl#master");'
+      - name: Install Books.jl#main
+        run: julia --project -e 'using Pkg;
+          Pkg.add(url="https://github.com/rikhuijzer/Books.jl#main");'
 
       - name: Install Pandoc, LaTeX and other dependencies
         run: julia --project -e 'using Pkg; Pkg.instantiate();
