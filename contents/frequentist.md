@@ -37,11 +37,19 @@ _gen/plot_one_sample_data_mean.md
 ```
 
 To estimate this, we can guess the distribution of the sample.
-As already stated, we assume that data is generated from a normal distribution and we can guess the mean and standard deviation from the sample, as depicted in 
+As already stated, we assume that data is generated from a normal distribution and we can use the sample mean and standard deviation to guess the distribution parameters.
+This distribution is depicted in @fig:plot_one_sample_data_distribution.
 
 ```{.include}
 _gen/plot_one_sample_data_distribution.md
 ```
+
+Now that we have this distribution, we could come up with a formal conclusion.
+For example, we can say that $\mu = \mu_s$ if $\mu_s$ lies within the 95% confidence interval of the estimated distribution.
+Then, in this case, we would now conclude that the means do not significantly differ.
+
+Unfortunately, for small samples, the normal distribution isn't good enough.
+This is due to the fact that ...
 
 
 $$ \text{one\_sample}(X_v, W) = w_0 $$

@@ -120,6 +120,7 @@ I favor
 $$ \text{lm}(X, W) = w_0 + w_1 x_1, $$
 
 where $\text{lm}$ could be any name.
+On top of this, I will respectively use Greek and Latin letters for measures of the population and samples since this is a common convention in statistics [@smith2018mathematical].
 
 ## Acknowledgements
 
