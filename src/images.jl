@@ -1,3 +1,7 @@
+function gadfly_text(x, y, s::AbstractString)
+    Guide.annotation(compose(context(), text(x, y, s)))
+end
+
 function image_and_caption(file, p; caption=file, w=6inch, h=4inch)
     image_path = write_svg(file, p; w, h)
     text = """
