@@ -10,7 +10,9 @@
     "julia",
     "data",
     "statistics",
+    "distributions",
     "frequentist",
+    "bayesian",
     "ci",
     "appendix",
     "references"

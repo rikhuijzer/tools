@@ -16,4 +16,4 @@ For the purposes of this book, this is an useful distinction since different Jul
 Unfortunately, for the purposes outside this book, the reader is encouraged to learn about both paradigms because both have their strengths and weaknesses.
 Luckily, much knowledge is applicable to both paradigms like, for example, distributions, cross-validation and visualizations.
 
-## Bayesian {#sec:bayes}
+One core element of these models are distributions which are discussed in @sec:distributions.

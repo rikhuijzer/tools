@@ -35,3 +35,23 @@ function green_ci()
 
     Options(composition; caption)
 end
+
+function galton_box()
+    c = context()
+    circle = Compose.circle
+    ball(x, y) = (c, circle(x, y, 0.01), stroke("gray"), linewidth(1.5px), fill("white"))
+    pin(x, y) = (c, circle(x, y, 0.008), stroke("gray"), linewidth(0.5px), fill("black"))
+    pins_at_row(n::Int, y) = (pin(0.1+i*0.4/n, y) for i in 1:n)
+    composition = compose(c,
+        (c, line(0.1, 0.05, 0.47, 0.4), stroke("gray"), linewidth(2px)),
+        (c, line(0.9, 0.05, 0.53, 0.4), stroke("gray"), linewidth(2px)),
+        ball(0.47, 0.36),
+        ball(0.32, 0.15),
+        ball(0.65, 0.08),
+        pins_at_row(1, 0.5)...,
+        pins_at_row(2, 0.6)...,
+        pins_at_row(3, 0.7)...,
+    )
+    caption = "Schematic depiction of a Galton box; based on an image from Wikimedia Commons."
+    Options(composition; caption)
+end
