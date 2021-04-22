@@ -1,4 +1,4 @@
-build/
+_build/
 _gen/
 *.log
 Manifest.toml
