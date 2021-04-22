@@ -48,4 +48,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           cname: tools.huijzer.xyz
           force_orphan: true
-          publish_dir: ./build/
+          publish_dir: ./_build/
