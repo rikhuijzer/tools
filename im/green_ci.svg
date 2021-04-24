@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="152.4mm" height="101.6mm" viewBox="0 0 152.4 101.6"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<defs>
+  <marker id="arrow" markerWidth="15" markerHeight="7" refX="5" refY="3.5" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L15,3.5 L0,7 z" stroke="context-stroke" fill="context-stroke"/>
+  </marker>
+</defs>
+<g stroke-width="0.79" stroke="#FF0000" id="img-53af680c-1">
+  <g transform="translate(136.4,64.01)">
+    <path fill="none" d="M2.29,-3.05 L-2.29,3.05 " class="primitive"/>
+  </g>
+  <g transform="translate(136.4,64.01)">
+    <path fill="none" d="M-2.29,-3.05 L2.29,3.05 " class="primitive"/>
+  </g>
+</g>
+<g font-size="4.23" fill="#808080" id="img-53af680c-2">
+  <g transform="translate(24.38,84.33)">
+    <g class="primitive">
+      <text dy="-0em">Fix typo</text>
+    </g>
+  </g>
+</g>
+<g font-size="4.23" fill="#808080" id="img-53af680c-3">
+  <g transform="translate(24.38,68.07)">
+    <g class="primitive">
+      <text dy="-0em">Add test</text>
+    </g>
+  </g>
+</g>
+<g stroke-width="0.53" stroke="#808080" id="img-53af680c-4">
+  <g transform="translate(15.24,81.28)">
+    <path fill="none" d="M-4.57,0 L4.57,0 " class="primitive"/>
+  </g>
+</g>
+<g stroke-width="0.53" stroke="#808080" id="img-53af680c-5">
+  <g transform="translate(15.24,66.04)">
+    <path fill="none" d="M-4.57,0 L4.57,0 " class="primitive"/>
+  </g>
+</g>
+<g stroke-width="0.53" stroke="#808080" id="img-53af680c-6">
+  <g transform="translate(15.24,73.66)">
+    <path fill="none" d="M0,-17.78 L0,17.78 " class="primitive"/>
+  </g>
+</g>
+<g fill="#FFFFFF" stroke-width="0.4" stroke="#808080" id="img-53af680c-7">
+  <g transform="translate(15.24,81.28)">
+    <circle cx="0" cy="0" r="3.05" class="primitive"/>
+  </g>
+</g>
+<g fill="#FFFFFF" stroke-width="0.4" stroke="#808080" id="img-53af680c-8">
+  <g transform="translate(15.24,66.04)">
+    <circle cx="0" cy="0" r="3.05" class="primitive"/>
+  </g>
+</g>
+<g fill="#000000" fill-opacity="0.000" stroke="#000000" id="img-53af680c-9">
+  <g transform="translate(76.2,40.64)">
+    <path d="M-68.58,-15.24 L68.58,-15.24 68.58,15.24 -68.58,15.24  z" class="primitive"/>
+  </g>
+</g>
+<g font-size="4.23" id="img-53af680c-10">
+  <g transform="translate(10.67,38.61)">
+    <g class="primitive">
+      <text dy="-0em">I've added a test.</text>
+    </g>
+  </g>
+</g>
+<g fill="#F1F8FF" stroke="#000000" id="img-53af680c-11">
+  <g transform="translate(76.2,15.24)">
+    <path d="M-68.58,-10.16 L68.58,-10.16 68.58,10.16 -68.58,10.16  z" class="primitive"/>
+  </g>
+</g>
+<g font-size="4.23" id="img-53af680c-12">
+  <g transform="translate(10.67,18.29)">
+    <g class="primitive">
+      <text dy="-0em">John Doe</text>
+    </g>
+  </g>
+</g>
+</svg>

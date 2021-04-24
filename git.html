@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Rik Huijzer" />
+  <title>Never losing your files again - Tools for Science</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="books-outside">
+<aside class="books-menu">
+<input type="checkbox" id="menu">
+<label for="menu">☰</label>
+<div class="books-title">
+<a href="/">Tools for Science</a>
+</div><br />
+<span class="books-subtitle">
+Automate work and manage complexity
+</span>
+<div class="books-menu-content">
+<li><a class="menu-level-1" href="preface.html"><b>1</b> Preface</a></li>
+<li><a class="menu-level-2" href="audience.html"><b>1.1</b> Audience</a></li>
+<li><a class="menu-level-2" href="reading-this-book.html"><b>1.2</b> Reading this book</a></li>
+<li><a class="menu-level-2" href="notation.html"><b>1.3</b> Notation</a></li>
+<li><a class="menu-level-2" href="acknowledgements.html"><b>1.4</b> Acknowledgements</a></li>
+<li><a class="menu-level-1" href="start.html"><b>2</b> Where it all starts</a></li>
+<li><a class="menu-level-2" href="interacting.html"><b>2.1</b> Interacting via text</a></li>
+<li><a class="menu-level-2" href="command-line.html"><b>2.2</b> Command line</a></li>
+<li><a class="menu-level-2" href="commands.html"><b>2.3</b> Commands</a></li>
+<li><a class="menu-level-1" href="git.html"><b>3</b> Never losing your files again</a></li>
+<li><a class="menu-level-2" href="git-history.html"><b>3.1</b> All your history</a></li>
+<li><a class="menu-level-2" href="getting-started.html"><b>3.2</b> Getting started</a></li>
+<li><a class="menu-level-2" href="git-collaborating.html"><b>3.3</b> Collaborating</a></li>
+<li><a class="menu-level-1" href="editing.html"><b>4</b> Quick text editing</a></li>
+<li><a class="menu-level-2" href="commands-1.html"><b>4.1</b> Commands</a></li>
+<li><a class="menu-level-2" href="plugins.html"><b>4.2</b> Plugins</a></li>
+<li><a class="menu-level-1" href="pandoc.html"><b>5</b> Converting text files</a></li>
+<li><a class="menu-level-2" href="latex.html"><b>5.1</b> LaTeX</a></li>
+<li><a class="menu-level-2" href="pandoc.html"><b>5.2</b> Pandoc</a></li>
+<li><a class="menu-level-2" href="presentations.html"><b>5.3</b> Presentations</a></li>
+<li><a class="menu-level-1" href="julia.html"><b>6</b> Automating tasks</a></li>
+<li><a class="menu-level-1" href="data.html"><b>7</b> Cleaning and preparing dirty data</a></li>
+<li><a class="menu-level-1" href="statistics.html"><b>8</b> Predicting the future</a></li>
+<li><a class="menu-level-2" href="distributions.html"><b>8.1</b> Distributions</a></li>
+<li><a class="menu-level-2" href="freq.html"><b>8.2</b> Frequentist</a></li>
+<li><a class="menu-level-2" href="bayesian.html"><b>8.3</b> Bayesian</a></li>
+<li><a class="menu-level-1" href="ci.html"><b>9</b> Running computations automatically</a></li>
+<li><a class="menu-level-1" href="appendix.html"><b>10</b> Appendix</a></li>
+<li><a class="menu-level-2" href="versions.html"><b>10.1</b> Versions</a></li>
+<li><a class="menu-level-2" href="i3wm.html"><b>10.2</b> i3wm</a></li>
+<li><a class="menu-level-1" href="references.html"><b></b> References</a></li>
+</div>
+</aside>
+
+<div class="books-content">
+<h1 data-number="3" id="sec:git"><span class="header-section-number">3</span> Never losing your files again</h1>
+<p>To show why the problem of not losing files is important, lets consider Kernel-land. In Kernel-land, the people all carry an extensive manual around which they follow precisely. For instance, when people in this land want to drink water, they read the according section in the manual and lift the cup to their mouth only if the manual instructs them to do so. Also, multiple people carry different manuals, but this is typically no issue since people can interact happily via conventions, such as shaking hands when meeting. The main joy in life is attained by obtaining a newer version of the manual; allowing the Kernel-landers to do new things and move around the place more quickly.</p>
+<p>Now, let’s say you and your team are responsible for maintaining and extending this manual. Maintenance is necessary because the world changes, so the manual has to be updated accordingly, and extending the manual is necessary because the people in Kernel-land are getting bored. At the same time, you try to minimise risks when updating the manual since earlier changes were disastrous. Once, you have mistakenly changed the line “the bananas can be found on the second <em>aisle</em> to the left” into “the bananas can be found on the second <em>isle</em> to the left.” It look quite a lot of work to figure out this bug since the only practical difference was in the time it took to obtain bananas.</p>
+<p>The main complexity of this work is introduced by the size of the manual. When all working in Word documents, merging the results would be laborious. By merging, I mean that some team member takes the newest version of the manual, works on it for a few hours to make changes and then call this the new version. This works until people start to work on the document at the same time. Even if the manual is updated in, say, Section 3 by person A and updated in Section 7 by person B, then these Word documents are difficult to merge. Without taking care, the person who saves his version after the other person <em>wins</em>. In other words, the changes of one person will then be overwritten and lost.</p>
+<p>Another problem is similar to the problem with the bananas described above. It can be that one small detail in the manual causes hard to predict problems. For example, it might happen that Kernellanders report that the manual tells them to a weird thing like being instructed to brush their teeth in the nearest house. It can then take a lot of work to determine that this only happens on rainy afternoons at Sunday in a town called Sussex, because Sussex is the only place which has 14 streetlights which are all at a 34° angle with the center axis of the road.</p>
+<p>These problems are solved by a tool created by Linus Torvalds. Linus is the maintainer of the Linux kernel which, in summary, is the manual for all the Linux computers and servers in the world. Around 2005, Linus had thousands of people working on the manual <span class="citation" data-cites="loeliger2012version">(<a href="/references.html#ref-loeliger2012version" role="doc-biblioref">Loeliger &amp; McCullough, 2012</a>)</span>. He was then reviewing the changes and merged them in the main manual version if it all looked good. A typical merge would take the computer 2 hours <span class="citation" data-cites="torvalds2005">(<a href="/references.html#ref-torvalds2005" role="doc-biblioref">Torvalds, 2005</a>)</span>, which Linus wasn’t willing to accept. He wanted 3 seconds <span class="citation" data-cites="torvalds2005">(<a href="/references.html#ref-torvalds2005" role="doc-biblioref">Torvalds, 2005</a>)</span> which he managed to obtain by creating <em>Git</em>.</p>
+<p>Nowadays, Git is the tool that all software engineers agree upon and where countless other tools are build upon. This is an impressive feat because there is a joke that says: “arguing with engineers is like rolling in the mud with pigs; after a while you realise that they like it.” If you talk to software engineers about Git, they will agree that it is <strong>the best tool</strong> for the job. Even if you are no software engineer, this is the tool that has been missing from your life. It will ensure that you never lose a file and that you don’t have to struggle with files named <code>1</code>, <code>1b</code>, <code>1b-final</code> and <code>1b-final-final</code> again.</p>
+ 
+<div class="license">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    Rik Huijzer
+</div>
+</body>
+</html>
+
+</div>
+</div>

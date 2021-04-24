@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Rik Huijzer" />
+  <title>Predicting the future - Tools for Science</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="books-outside">
+<aside class="books-menu">
+<input type="checkbox" id="menu">
+<label for="menu">☰</label>
+<div class="books-title">
+<a href="/">Tools for Science</a>
+</div><br />
+<span class="books-subtitle">
+Automate work and manage complexity
+</span>
+<div class="books-menu-content">
+<li><a class="menu-level-1" href="preface.html"><b>1</b> Preface</a></li>
+<li><a class="menu-level-2" href="audience.html"><b>1.1</b> Audience</a></li>
+<li><a class="menu-level-2" href="reading-this-book.html"><b>1.2</b> Reading this book</a></li>
+<li><a class="menu-level-2" href="notation.html"><b>1.3</b> Notation</a></li>
+<li><a class="menu-level-2" href="acknowledgements.html"><b>1.4</b> Acknowledgements</a></li>
+<li><a class="menu-level-1" href="start.html"><b>2</b> Where it all starts</a></li>
+<li><a class="menu-level-2" href="interacting.html"><b>2.1</b> Interacting via text</a></li>
+<li><a class="menu-level-2" href="command-line.html"><b>2.2</b> Command line</a></li>
+<li><a class="menu-level-2" href="commands.html"><b>2.3</b> Commands</a></li>
+<li><a class="menu-level-1" href="git.html"><b>3</b> Never losing your files again</a></li>
+<li><a class="menu-level-2" href="git-history.html"><b>3.1</b> All your history</a></li>
+<li><a class="menu-level-2" href="getting-started.html"><b>3.2</b> Getting started</a></li>
+<li><a class="menu-level-2" href="git-collaborating.html"><b>3.3</b> Collaborating</a></li>
+<li><a class="menu-level-1" href="editing.html"><b>4</b> Quick text editing</a></li>
+<li><a class="menu-level-2" href="commands-1.html"><b>4.1</b> Commands</a></li>
+<li><a class="menu-level-2" href="plugins.html"><b>4.2</b> Plugins</a></li>
+<li><a class="menu-level-1" href="pandoc.html"><b>5</b> Converting text files</a></li>
+<li><a class="menu-level-2" href="latex.html"><b>5.1</b> LaTeX</a></li>
+<li><a class="menu-level-2" href="pandoc.html"><b>5.2</b> Pandoc</a></li>
+<li><a class="menu-level-2" href="presentations.html"><b>5.3</b> Presentations</a></li>
+<li><a class="menu-level-1" href="julia.html"><b>6</b> Automating tasks</a></li>
+<li><a class="menu-level-1" href="data.html"><b>7</b> Cleaning and preparing dirty data</a></li>
+<li><a class="menu-level-1" href="statistics.html"><b>8</b> Predicting the future</a></li>
+<li><a class="menu-level-2" href="distributions.html"><b>8.1</b> Distributions</a></li>
+<li><a class="menu-level-2" href="freq.html"><b>8.2</b> Frequentist</a></li>
+<li><a class="menu-level-2" href="bayesian.html"><b>8.3</b> Bayesian</a></li>
+<li><a class="menu-level-1" href="ci.html"><b>9</b> Running computations automatically</a></li>
+<li><a class="menu-level-1" href="appendix.html"><b>10</b> Appendix</a></li>
+<li><a class="menu-level-2" href="versions.html"><b>10.1</b> Versions</a></li>
+<li><a class="menu-level-2" href="i3wm.html"><b>10.2</b> i3wm</a></li>
+<li><a class="menu-level-1" href="references.html"><b></b> References</a></li>
+</div>
+</aside>
+
+<div class="books-content">
+<h1 data-number="8" id="sec:statistics"><span class="header-section-number">8</span> Predicting the future</h1>
+<p>If you are like me and, basically, all scientists, you want to predict the future. With good predictions, you can do things like earning tons of money via stock markets or successfully treating patients, scaling up your favorite chemical process or getting your rocket into space. Even historians work like this, they meticulously investigate the past and use that knowledge to make predictions. For example, <span class="citation" data-cites="harari2014sapiens"><a href="/references.html#ref-harari2014sapiens" role="doc-biblioref">Harari</a> (<a href="/references.html#ref-harari2014sapiens" role="doc-biblioref">2014</a>)</span> is a book by Yuval Noah Harari describing a brief history of humankind and is superseded by <span class="citation" data-cites="harari2016homo"><a href="/references.html#ref-harari2016homo" role="doc-biblioref">Harari</a> (<a href="/references.html#ref-harari2016homo" role="doc-biblioref">2016</a>)</span> where Harari describes the future. These predictions are obtained by first reducing the complexity of the world by arguing that the world can be simplified in a certain way. This is also known as using a <em>model</em>. Then, after convicing the audience that the model is an accurate simplification of the real world, it can be applied to make a prediction. In some situations, particularity science, this approach is not considered precise enough. For example, to get new medication approved, it isn’t sufficient to argue that the medication is effective because</p>
+<ul>
+<li>some patients say that they feel less sick after getting the medication,</li>
+<li>many patients found the medication tasty <em>and</em></li>
+<li>you feel good after handing out the medication.</li>
+</ul>
+<p>Instead, approval is obtained by applying models on data. A similar conclusion, based on a statistical model, would be</p>
+<ul>
+<li>patients who received the medication have significantly lower values of X which indicates that they are less sick.</li>
+</ul>
+<p>So, it is expected that the world is simplified into a statistical model and to use that to prove the effectiveness of the medication. Unfortunately, this tradeoff between accuracy and complexity is a well-known problem in science. To see why this is the case, lets take a look at determinism which will lead us to causality and distributions.</p>
+<p>Determinism …</p>
+<p>Different people group these models in different ways. Often, the groups are dichotomized which can simplify the discussion, but do note that there is usually a continuum, that is, not all models fall strictly into one category. For example, statistics can be separated into algorithms and inference <span class="citation" data-cites="efron2016computer">(<a href="/references.html#ref-efron2016computer" role="doc-biblioref">Efron &amp; Hastie, 2016</a>)</span>. Then, classifying which mail is spam can be seen as a purely algorithmic problem. If the algorithm works, then it doesn’t really matter to know why it works. In science, the focus lies more on inference, that is, to know <strong>why</strong> a model works and what can be <strong>inferred</strong> from it.</p>
+<p>Another common distinction is between frequentist and Bayesian statistics. For the purposes of this book, this is an useful distinction since different Julia libraries can clearly be classified to be either frequentist or Bayesian. Unfortunately, for the purposes outside this book, the reader is encouraged to learn about both paradigms because both have their strengths and weaknesses. Luckily, much knowledge is applicable to both paradigms like, for example, distributions, cross-validation and visualizations.</p>
+<p>One core element of these models are distributions which are discussed in Section <a href="/distributions.html#sec:distributions">8.1</a>.</p>
+ 
+<div class="license">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    Rik Huijzer
+</div>
+</body>
+</html>
+
+</div>
+</div>

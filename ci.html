@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Rik Huijzer" />
+  <title>Running computations automatically - Tools for Science</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="books-outside">
+<aside class="books-menu">
+<input type="checkbox" id="menu">
+<label for="menu">☰</label>
+<div class="books-title">
+<a href="/">Tools for Science</a>
+</div><br />
+<span class="books-subtitle">
+Automate work and manage complexity
+</span>
+<div class="books-menu-content">
+<li><a class="menu-level-1" href="preface.html"><b>1</b> Preface</a></li>
+<li><a class="menu-level-2" href="audience.html"><b>1.1</b> Audience</a></li>
+<li><a class="menu-level-2" href="reading-this-book.html"><b>1.2</b> Reading this book</a></li>
+<li><a class="menu-level-2" href="notation.html"><b>1.3</b> Notation</a></li>
+<li><a class="menu-level-2" href="acknowledgements.html"><b>1.4</b> Acknowledgements</a></li>
+<li><a class="menu-level-1" href="start.html"><b>2</b> Where it all starts</a></li>
+<li><a class="menu-level-2" href="interacting.html"><b>2.1</b> Interacting via text</a></li>
+<li><a class="menu-level-2" href="command-line.html"><b>2.2</b> Command line</a></li>
+<li><a class="menu-level-2" href="commands.html"><b>2.3</b> Commands</a></li>
+<li><a class="menu-level-1" href="git.html"><b>3</b> Never losing your files again</a></li>
+<li><a class="menu-level-2" href="git-history.html"><b>3.1</b> All your history</a></li>
+<li><a class="menu-level-2" href="getting-started.html"><b>3.2</b> Getting started</a></li>
+<li><a class="menu-level-2" href="git-collaborating.html"><b>3.3</b> Collaborating</a></li>
+<li><a class="menu-level-1" href="editing.html"><b>4</b> Quick text editing</a></li>
+<li><a class="menu-level-2" href="commands-1.html"><b>4.1</b> Commands</a></li>
+<li><a class="menu-level-2" href="plugins.html"><b>4.2</b> Plugins</a></li>
+<li><a class="menu-level-1" href="pandoc.html"><b>5</b> Converting text files</a></li>
+<li><a class="menu-level-2" href="latex.html"><b>5.1</b> LaTeX</a></li>
+<li><a class="menu-level-2" href="pandoc.html"><b>5.2</b> Pandoc</a></li>
+<li><a class="menu-level-2" href="presentations.html"><b>5.3</b> Presentations</a></li>
+<li><a class="menu-level-1" href="julia.html"><b>6</b> Automating tasks</a></li>
+<li><a class="menu-level-1" href="data.html"><b>7</b> Cleaning and preparing dirty data</a></li>
+<li><a class="menu-level-1" href="statistics.html"><b>8</b> Predicting the future</a></li>
+<li><a class="menu-level-2" href="distributions.html"><b>8.1</b> Distributions</a></li>
+<li><a class="menu-level-2" href="freq.html"><b>8.2</b> Frequentist</a></li>
+<li><a class="menu-level-2" href="bayesian.html"><b>8.3</b> Bayesian</a></li>
+<li><a class="menu-level-1" href="ci.html"><b>9</b> Running computations automatically</a></li>
+<li><a class="menu-level-1" href="appendix.html"><b>10</b> Appendix</a></li>
+<li><a class="menu-level-2" href="versions.html"><b>10.1</b> Versions</a></li>
+<li><a class="menu-level-2" href="i3wm.html"><b>10.2</b> i3wm</a></li>
+<li><a class="menu-level-1" href="references.html"><b></b> References</a></li>
+</div>
+</aside>
+
+<div class="books-content">
+<h1 data-number="9" id="sec:ci"><span class="header-section-number">9</span> Running computations automatically</h1>
+<p>Continuous integrations (CI) and continous delivery (CD) allow software developers to make fewer mistakes by validating code changes automatically before applying them in the codebase. This is elaborated on by <a href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab</a>: CI/CD is about ensuring “the delivery of CI-validated code […] via structured deployment pipelines.”</p>
+<p>This sounds complex, but actually isn’t. CI arose from the need to validate code changes, in version control such as Git, automatically. Upon each code change, a server takes the code and runs all the tests. When the tests pass, you can be more sure that the changes are correct; when the tests fail, you know that something is broken. This is particulary helpful for code reviews when deciding whether the changes should be merged in the codebase, see Figure <a href="#fig:green_ci">6</a>.</p>
+<figure>
+<img src="/im/green_ci.svg" id="fig:green_ci" alt="Figure 6: Simplified view of the GitHub interface for pull-requests. It shows that John Doe did a failing commit and fixed it afterwards." /><figcaption aria-hidden="true">Figure 6: Simplified view of the GitHub interface for pull-requests. It shows that John Doe did a failing commit and fixed it afterwards.</figcaption>
+</figure>
+<p>CD is also about running computations upon code changes. This time however, the computations can do things like compiling the code into an executable. The executable can then continuously be delivered to the end-user, hence the name CD.</p>
+<p>Interestingly enough, this idea is much more powerful than just CI/CD, which is why GitHub calls it <a href="https://github.com/home/">GitHub Actions</a> to “automate anything.” (You can read this as: <em>automate anything which can be controlled, directly or indirectly, from a computer capable of running the GitHub runner</em>.) Like mentioned before, upon each code change we can</p>
+<ul>
+<li>run tests, and/or</li>
+<li>compile a program,</li>
+</ul>
+<p>but we can also</p>
+<ul>
+<li>generate a website (like the one you’re looking at right now),</li>
+<li>generate a <a href="https://github.com/hadley/r4ds">book</a>, or</li>
+<li>run a backup.</li>
+</ul>
+<p><strong>TODO:</strong> Add Compose.jl image here.</p>
+<p>In essence, CI/CD and Workflows are about <strong>linking computations to text</strong>.</p>
+<p>(Actually, you can automate anything which can be managed by a GitHub runner; this includes most, but not all, systems.)</p>
+ 
+<div class="license">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    Rik Huijzer
+</div>
+</body>
+</html>
+
+</div>
+</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Rik Huijzer" />
+  <title>Preface - Tools for Science</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="books-outside">
+<aside class="books-menu">
+<input type="checkbox" id="menu">
+<label for="menu">☰</label>
+<div class="books-title">
+<a href="/">Tools for Science</a>
+</div><br />
+<span class="books-subtitle">
+Automate work and manage complexity
+</span>
+<div class="books-menu-content">
+<li><a class="menu-level-1" href="preface.html"><b>1</b> Preface</a></li>
+<li><a class="menu-level-2" href="audience.html"><b>1.1</b> Audience</a></li>
+<li><a class="menu-level-2" href="reading-this-book.html"><b>1.2</b> Reading this book</a></li>
+<li><a class="menu-level-2" href="notation.html"><b>1.3</b> Notation</a></li>
+<li><a class="menu-level-2" href="acknowledgements.html"><b>1.4</b> Acknowledgements</a></li>
+<li><a class="menu-level-1" href="start.html"><b>2</b> Where it all starts</a></li>
+<li><a class="menu-level-2" href="interacting.html"><b>2.1</b> Interacting via text</a></li>
+<li><a class="menu-level-2" href="command-line.html"><b>2.2</b> Command line</a></li>
+<li><a class="menu-level-2" href="commands.html"><b>2.3</b> Commands</a></li>
+<li><a class="menu-level-1" href="git.html"><b>3</b> Never losing your files again</a></li>
+<li><a class="menu-level-2" href="git-history.html"><b>3.1</b> All your history</a></li>
+<li><a class="menu-level-2" href="getting-started.html"><b>3.2</b> Getting started</a></li>
+<li><a class="menu-level-2" href="git-collaborating.html"><b>3.3</b> Collaborating</a></li>
+<li><a class="menu-level-1" href="editing.html"><b>4</b> Quick text editing</a></li>
+<li><a class="menu-level-2" href="commands-1.html"><b>4.1</b> Commands</a></li>
+<li><a class="menu-level-2" href="plugins.html"><b>4.2</b> Plugins</a></li>
+<li><a class="menu-level-1" href="pandoc.html"><b>5</b> Converting text files</a></li>
+<li><a class="menu-level-2" href="latex.html"><b>5.1</b> LaTeX</a></li>
+<li><a class="menu-level-2" href="pandoc.html"><b>5.2</b> Pandoc</a></li>
+<li><a class="menu-level-2" href="presentations.html"><b>5.3</b> Presentations</a></li>
+<li><a class="menu-level-1" href="julia.html"><b>6</b> Automating tasks</a></li>
+<li><a class="menu-level-1" href="data.html"><b>7</b> Cleaning and preparing dirty data</a></li>
+<li><a class="menu-level-1" href="statistics.html"><b>8</b> Predicting the future</a></li>
+<li><a class="menu-level-2" href="distributions.html"><b>8.1</b> Distributions</a></li>
+<li><a class="menu-level-2" href="freq.html"><b>8.2</b> Frequentist</a></li>
+<li><a class="menu-level-2" href="bayesian.html"><b>8.3</b> Bayesian</a></li>
+<li><a class="menu-level-1" href="ci.html"><b>9</b> Running computations automatically</a></li>
+<li><a class="menu-level-1" href="appendix.html"><b>10</b> Appendix</a></li>
+<li><a class="menu-level-2" href="versions.html"><b>10.1</b> Versions</a></li>
+<li><a class="menu-level-2" href="i3wm.html"><b>10.2</b> i3wm</a></li>
+<li><a class="menu-level-1" href="references.html"><b></b> References</a></li>
+</div>
+</aside>
+
+<div class="books-content">
+<h1 data-number="1" id="sec:preface"><span class="header-section-number">1</span> Preface</h1>
+<p>Artificial intelligence (AI) is lauded by many as the fourth industrial revolution. It promises to make better decisions and can automate more work. One of the largest countries in the world is spending massive resources on autonomous driving, urban cognition, medical imaging, voice intelligence, visual computing, marketing intelligence, video perception, intelligent supply chains, image perception, smart education, smart homes and many more <span class="citation" data-cites="wu2020towards">(<a href="/references.html#ref-wu2020towards" role="doc-biblioref">Wu et al., 2020</a>)</span>. In this sense, we live in exciting times. However, there is a common held belief that these automated analyses, machine learning, neural networks and artificial intelligence can only be achieved by large countries, or companies like DeepMind, OpenAI, Microsoft, Netflix and Amazon. This is false. Basically, what we call artificial intelligence is just machine learning <span class="citation" data-cites="jordan2019artificial">(<a href="/references.html#ref-jordan2019artificial" role="doc-biblioref">Jordan, 2019</a>)</span> which is basically statistics. Here, it is statistics being applied by software engineers. The benefit of software engineerings is that they are used to managing complexity with tools. So, for software engineers it doesn’t matter they work on the newest maching learning systems or more traditional systems. In both cases, the work is quite similar.</p>
+<p>There have been failures with AI software, such as Microsoft’s chatbot learning offensive language or Apple’s Face ID being broken by hackers <span class="citation" data-cites="greenberg2017hackers">(<a href="/references.html#ref-greenberg2017hackers" role="doc-biblioref">Greenberg, 2017</a>)</span>. Still, it is mostly success stories about beating the world champion in Go matches <span class="citation" data-cites="deepmind2020alphago">(<a href="/references.html#ref-deepmind2020alphago" role="doc-biblioref">DeepMind, 2020</a>)</span>, predicting the stock market, selling more products with better recommendations. The success comes from the scaling capabilities. Once the software is correct, it can be scaled to millions of users or base analysis results on petabytes of data.</p>
+<p>However, software engineering isn’t part of the typical scientist’s skillset. Non-engineering students are taught to do statistical analyses in convenient statistical software with graphical user interfaces, such as Excel, SPSS, JAGS or JASP. The problem with these tools is that they cannot solve any computation problem. In their daily life, they will run into problems which are out of the scope of these convenient tools. This while the <strong>real</strong> tools, general-purpose programming lanuages, have never been easier to use. Everything you need to automate analyses and work with AI is publicly and freely available.</p>
+<p>This explains why I decided to write this book. With a background in computer science, I have transitioned to a PhD in Psychology. Here, I see that days are fully spent behind a computer while being hindered by the convenient tools. I hear the same stories from colleagues in the medical, biological, chemical and mathematical sciences. I’ve even heard professors talk about some of their tasks being laborious while knowing that many great tools can easily automate these tasks. Unfortunately, I know that using these tools cannot be learned in a day; learning only one of them is not enough. Combining the tools in this book is where the real power lies. I’ve often convinced people of some tool by amazing them with the speed. However, on their way home, they would realise that the tool doesn’t work in their workflow. That’s why I wrote this book: to show the whole picture instead of just one tool. Also, with this book I aim to present the essentials. These essentials will remain applicable for many years to come and allow you to easily switch to other tools.</p>
+ 
+<div class="license">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    Rik Huijzer
+</div>
+</body>
+</html>
+
+</div>
+</div>

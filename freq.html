@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Rik Huijzer" />
+  <title>Frequentist - Tools for Science</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="stylesheet" href="/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="books-outside">
+<aside class="books-menu">
+<input type="checkbox" id="menu">
+<label for="menu">☰</label>
+<div class="books-title">
+<a href="/">Tools for Science</a>
+</div><br />
+<span class="books-subtitle">
+Automate work and manage complexity
+</span>
+<div class="books-menu-content">
+<li><a class="menu-level-1" href="preface.html"><b>1</b> Preface</a></li>
+<li><a class="menu-level-2" href="audience.html"><b>1.1</b> Audience</a></li>
+<li><a class="menu-level-2" href="reading-this-book.html"><b>1.2</b> Reading this book</a></li>
+<li><a class="menu-level-2" href="notation.html"><b>1.3</b> Notation</a></li>
+<li><a class="menu-level-2" href="acknowledgements.html"><b>1.4</b> Acknowledgements</a></li>
+<li><a class="menu-level-1" href="start.html"><b>2</b> Where it all starts</a></li>
+<li><a class="menu-level-2" href="interacting.html"><b>2.1</b> Interacting via text</a></li>
+<li><a class="menu-level-2" href="command-line.html"><b>2.2</b> Command line</a></li>
+<li><a class="menu-level-2" href="commands.html"><b>2.3</b> Commands</a></li>
+<li><a class="menu-level-1" href="git.html"><b>3</b> Never losing your files again</a></li>
+<li><a class="menu-level-2" href="git-history.html"><b>3.1</b> All your history</a></li>
+<li><a class="menu-level-2" href="getting-started.html"><b>3.2</b> Getting started</a></li>
+<li><a class="menu-level-2" href="git-collaborating.html"><b>3.3</b> Collaborating</a></li>
+<li><a class="menu-level-1" href="editing.html"><b>4</b> Quick text editing</a></li>
+<li><a class="menu-level-2" href="commands-1.html"><b>4.1</b> Commands</a></li>
+<li><a class="menu-level-2" href="plugins.html"><b>4.2</b> Plugins</a></li>
+<li><a class="menu-level-1" href="pandoc.html"><b>5</b> Converting text files</a></li>
+<li><a class="menu-level-2" href="latex.html"><b>5.1</b> LaTeX</a></li>
+<li><a class="menu-level-2" href="pandoc.html"><b>5.2</b> Pandoc</a></li>
+<li><a class="menu-level-2" href="presentations.html"><b>5.3</b> Presentations</a></li>
+<li><a class="menu-level-1" href="julia.html"><b>6</b> Automating tasks</a></li>
+<li><a class="menu-level-1" href="data.html"><b>7</b> Cleaning and preparing dirty data</a></li>
+<li><a class="menu-level-1" href="statistics.html"><b>8</b> Predicting the future</a></li>
+<li><a class="menu-level-2" href="distributions.html"><b>8.1</b> Distributions</a></li>
+<li><a class="menu-level-2" href="freq.html"><b>8.2</b> Frequentist</a></li>
+<li><a class="menu-level-2" href="bayesian.html"><b>8.3</b> Bayesian</a></li>
+<li><a class="menu-level-1" href="ci.html"><b>9</b> Running computations automatically</a></li>
+<li><a class="menu-level-1" href="appendix.html"><b>10</b> Appendix</a></li>
+<li><a class="menu-level-2" href="versions.html"><b>10.1</b> Versions</a></li>
+<li><a class="menu-level-2" href="i3wm.html"><b>10.2</b> i3wm</a></li>
+<li><a class="menu-level-1" href="references.html"><b></b> References</a></li>
+</div>
+</aside>
+
+<div class="books-content">
+<h2 data-number="8.2" id="sec:freq"><span class="header-section-number">8.2</span> Frequentist</h2>
+<p>After introducing some common statistical notions in the previous sections, we can now focus on linear models and their corresponding statistical tests. From linear models, it is possible to formulate many common tests, or very close approximations, including Pearson correlations, t-tests and ANOVAs <span class="citation" data-cites="lindelov2019common">(<a href="/references.html#ref-lindelov2019common" role="doc-biblioref">Lindeløv, 2019</a>)</span>. Note that linear models are as valid in the Bayesian paradigm as in the frequentist paradigm. However, here we focus on the combination with the frequentists tests, which is why these models are listed under the frequentist section.</p>
+<p>In line with <span class="citation" data-cites="bishop2006pattern"><a href="/references.html#ref-bishop2006pattern" role="doc-biblioref">Bishop</a> (<a href="/references.html#ref-bishop2006pattern" role="doc-biblioref">2006</a>)</span>, generally, we can write a linear model <span class="math inline">\(\text{lm}\)</span> as</p>
+<p><span class="math display">\[ \text{lm}(X_{v}, W_{m}) = w_0 + w_1 x_1 + ... + w_m x_v, \]</span></p>
+<p>with input variables <span class="math inline">\(X_v\)</span> and weights <span class="math inline">\(W_m\)</span>. Note that this means that the data with <span class="math inline">\(n\)</span> measurements can be stored in a <span class="math inline">\(n \times v\)</span> matrix. For the rest of this chapter, we assume that the errors are Gaussian.</p>
+<h3 data-number="8.2.1" id="one-sample"><span class="header-section-number">8.2.1</span> One sample</h3>
+<p>Say that you have a vector of sample values <code>A</code> and want to test whether the mean of the population is <span class="math inline">\(x\)</span>. Lets denote the mean of the population and sample respectively by <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\mu_s\)</span> and, for illustration purposes, lets generate some data:</p>
+<pre><code>function one_sample_data()
+    n = 12
+    μ = 10
+    σ = 3
+    Random.seed!(1)
+    A = rand(Normal(μ, σ), n)
+    μ₀ = μ + 4
+    (n, μ, σ, A, μ₀)
+end</code></pre>
+<p>which is visualized in Figure <a href="#fig:plot_one_sample_data">3</a>.</p>
+<figure>
+<img src="/im/plot_one_sample_data.svg" id="fig:plot_one_sample_data" alt="Figure 3: 12 points generated from a normal distribution with μ = 10 and σ = 3." /><figcaption aria-hidden="true">Figure 3: 12 points generated from a normal distribution with μ = 10 and σ = 3.</figcaption>
+</figure>
+<p>Okay, so let’s say that we want to know whether this data was generated by a process having <span class="math inline">\(\mu_0\)</span>; this is our null hypothesis and we want to check whether the data is significantly different, that is, we want to test whether <span class="math inline">\(\mu \neq \mu_0\)</span>. A simple way to guess <span class="math inline">\(\mu\)</span> is to take the mean of the sample. However, these means on their own don’t provide much insight into <strong>how</strong> likely it is that <span class="math inline">\(\mu = \mu_0\)</span>, see Figure <a href="#fig:plot_one_sample_data_mean">4</a>.</p>
+<figure>
+<img src="/im/plot_one_sample_data_mean.svg" id="fig:plot_one_sample_data_mean" alt="Figure 4: 12 points generated from a normal distribution with μ = 10 and σ = 3. Also, the sample mean mₛ and the null-hypothesis mean μ₀ are shown." /><figcaption aria-hidden="true">Figure 4: 12 points generated from a normal distribution with μ = 10 and σ = 3. Also, the sample mean mₛ and the null-hypothesis mean μ₀ are shown.</figcaption>
+</figure>
+<p>To estimate this, we can guess the distribution of the sample. As already stated, we assume that data is generated from a normal distribution and we can use the sample mean and standard deviation to guess the distribution parameters. This distribution is depicted in Figure <a href="#fig:plot_one_sample_data_distribution">5</a>.</p>
+<figure>
+<img src="/im/plot_one_sample_data_distribution.svg" id="fig:plot_one_sample_data_distribution" alt="Figure 5: Normal distribution for the sample mean and standard deviation. The means for the sample mean mₛ and null-hypothesis μ₀ are indicated by dashed black lines. The bounds for the 95% confidence interval are indicated by blue solid lines." /><figcaption aria-hidden="true">Figure 5: Normal distribution for the sample mean and standard deviation. The means for the sample mean mₛ and null-hypothesis μ₀ are indicated by dashed black lines. The bounds for the 95% confidence interval are indicated by blue solid lines.</figcaption>
+</figure>
+<p>Now that we have this distribution, we could come up with a formal conclusion. For example, we can say that <span class="math inline">\(\mu = \mu_s\)</span> if <span class="math inline">\(\mu_s\)</span> lies within the 95% confidence interval of the estimated distribution. Then, in this case, we would now conclude that the means do not significantly differ.</p>
+<p>Unfortunately, for small samples, the normal distribution isn’t good enough. This is due to the fact that …</p>
+<p><span class="math display">\[ \text{one\_sample}(X_v, W) = w_0 \]</span></p>
+<div id="tbl:one_sample_tests">
+<table>
+<caption>Table 2: Comparison of multiple models being fitted on our sample data with alternative mean <span class="math inline">\(\mu_0 = μ + 4 = 14\)</span>.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">model</th>
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">lower</th>
+<th style="text-align: right;">upper</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">t-test</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">8.4</td>
+<td style="text-align: right;">12.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+ 
+<div class="license">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    Rik Huijzer
+</div>
+</body>
+</html>
+
+</div>
+</div>
